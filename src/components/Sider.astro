@@ -1,0 +1,14 @@
+---
+import "../styles/index.css";
+const { categories } = Astro.props;
+---
+
+<aside class="sider">
+  {
+    categories.map((category: string) => (
+      <li>
+        <a href={"#" + category}>{category}</a>
+      </li>
+    ))
+  }
+</aside>

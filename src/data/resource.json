@@ -1,0 +1,492 @@
+[
+  {
+    "name": "学习",
+    "icon": "./images/menu/study.svg",
+    "sites": [
+      {
+        "name": "学习通",
+        "url": "https://i.chaoxing.com/"
+      },
+      {
+        "name": "慕课",
+        "url": "https://www.icourse163.org/"
+      },
+      {
+        "name": "知网",
+        "url": "https://www.cnki.net"
+      },
+      {
+        "name": "WolframAlpha",
+        "url": "https://www.wolframalpha.com"
+      },
+      {
+        "name": "GeoGebra",
+        "url": "https://www.geogebra.org"
+      },
+      {
+        "name": "数列",
+        "url": "https://oeis.org"
+      },
+      {
+        "name": "LaTeX",
+        "url": "https://www.latexlive.com"
+      },
+      {
+        "name": "剑桥词典",
+        "url": "https://dictionary.cambridge.org"
+      },
+      {
+        "name": "柯林斯",
+        "url": "https://www.collinsdictionary.com"
+      },
+      {
+        "name": "有道翻译",
+        "url": "https://fanyi.youdao.com"
+      },
+      {
+        "name": "CCAMC",
+        "url": "http://www.ccamc.co"
+      },
+      {
+        "name": "日语词典",
+        "url": "https://aoilang.com/dict/"
+      },
+      {
+        "name": "不背",
+        "url": "https://bbdc.cn/"
+      },
+      {
+        "name": "ProcessOn",
+        "url": "https://www.processon.com/"
+      }
+    ]
+  },
+  {
+    "name": "音乐",
+    "icon": "./images/menu/music.svg",
+    "sites": [
+      {
+        "name": "网易云",
+        "url": "https://music.163.com",
+        "image": "https://music.163.com/favicon.ico"
+      },
+      {
+        "name": "QQ音乐",
+        "url": "https://y.qq.com"
+      },
+      {
+        "name": "酷狗",
+        "url": "https://www.kugou.com"
+      },
+      {
+        "name": "漫音社",
+        "url": "http://www.acgjc.com"
+      },
+      {
+        "name": "歌词滚动姬",
+        "url": "https://lrc-maker.github.io"
+      },
+      {
+        "name": "JE曲谱库",
+        "url": "https://github.com/zytx121/je"
+      }
+    ]
+  },
+  {
+    "name": "阅读",
+    "icon": "./images/menu/bookshelf.svg",
+    "sites": [
+      {
+        "name": "微信读书",
+        "url": "https://weread.qq.com",
+        "image": "https://weread.qq.com/favicon.ico"
+      },
+      {
+        "name": "鸠摩",
+        "url": "https://www.jiumodiary.com"
+      },
+      {
+        "name": "Gutenberg",
+        "url": "https://www.gutenberg.org"
+      },
+      {
+        "name": "鲁迅资料",
+        "url": "http://www.luxunmuseum.com.cn/cx/"
+      },
+      {
+        "name": "轻小说文库",
+        "url": "https://www.wenku8.net/index.php"
+      },
+      {
+        "name": "轻之国度",
+        "url": "https://www.lightnovel.us"
+      },
+      {
+        "name": "凉宫春日",
+        "url": "https://www.haruhifanclub.com/library"
+      },
+      {
+        "name": "CFOP",
+        "url": "https://www.gancube.com/zh/3x3x3-cfop-guide-of-gancube"
+      },
+      {
+        "name": "数独",
+        "url": "https://www.zhihu.com/column/SunnieSudoku"
+      },
+      {
+        "name": "FPP",
+        "url": "https://otexts.com/fppcn/"
+      },
+      {
+        "name": "生存手册",
+        "url": "https://survivesjtu.gitbook.io/survivesjtumanual/"
+      },
+      {
+        "name": "事物与事件",
+        "url": "https://pedantries.com/"
+      },
+      {
+        "name": "QuestMobile报告",
+        "url": "https://www.questmobile.com.cn/research/reports"
+      }
+    ]
+  },
+  {
+    "name": "视频",
+    "icon": "./images/menu/video.svg",
+    "sites": [
+      {
+        "name": "Bilibili",
+        "url": "https://www.bilibili.com",
+        "description": "哔哩哔哩",
+        "image": "https://www.bilibili.com/favicon.ico"
+      },
+      {
+        "name": "AcFun",
+        "url": "https://www.acfun.cn",
+        "description": "AcFun弹幕视频网",
+        "image": "https://cdn.aixifan.com/ico/favicon.ico"
+      },
+      {
+        "name": "AGE动漫",
+        "url": "https://www.agedm.org/"
+      },
+      {
+        "name": "嘶哩嘶哩",
+        "url": "https://www.silisili.link/",
+        "description": "silisilinb"
+      },
+      {
+        "name": "NyaFun动漫",
+        "url": "https://www.nyadm.net/"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/"
+      },
+      {
+        "name": "萌番组",
+        "url": "https://bangumi.moe"
+      },
+      {
+        "name": "蜜柑计划",
+        "url": "https://mikanime.tv",
+        "description": "Mikan Project"
+      },
+      {
+        "name": "新番表",
+        "url": "https://yuc.wiki",
+        "description": "Yuc's Anime List"
+      },
+      {
+        "name": "VCB-S",
+        "url": "https://vcb-s.com",
+        "description": "VCB Studio"
+      },
+      {
+        "name": "英配部落",
+        "url": "https://www.edatribe.com",
+        "description": "英配动画网站"
+      },
+      {
+        "name": "识图找番",
+        "url": "https://trace.moe",
+        "description": "trace.moe"
+      },
+      {
+        "name": "AnimeTrace",
+        "url": "https://ai.animedb.cn",
+        "description": "以图识番"
+      }
+    ]
+  },
+  {
+    "name": "图片",
+    "icon": "./images/menu/pic.svg",
+    "sites": [
+      {
+        "name": "pixiv",
+        "url": "https://www.pixiv.net"
+      },
+      {
+        "name": "萌图社",
+        "url": "https://moetu.club"
+      },
+      {
+        "name": "Pixivic",
+        "url": "https://pixivic.com"
+      },
+      {
+        "name": "SauceNAO",
+        "url": "https://saucenao.com"
+      },
+      {
+        "name": "Bigjpg",
+        "url": "https://bigjpg.com"
+      },
+      {
+        "name": "pom",
+        "url": "https://pom-official.jp/"
+      },
+      {
+        "name": "轻音部的小窝",
+        "url": "https://www.miomoe.cn/"
+      }
+    ]
+  },
+  {
+    "name": "日常",
+    "icon": "./images/menu/tea.svg",
+    "sites": [
+      {
+        "name": "Outlook",
+        "url": "https://outlook.live.com"
+      },
+      {
+        "name": "完美邮箱",
+        "url": "https://www.email.cn/"
+      },
+      {
+        "name": "QQ邮箱",
+        "url": "https://mail.qq.com"
+      },
+      {
+        "name": "知乎",
+        "url": "https://www.zhihu.com/explore"
+      },
+      {
+        "name": "微博",
+        "url": "https://weibo.com"
+      },
+      {
+        "name": "X",
+        "url": "https://twitter.com/home"
+      },
+      {
+        "name": "贴吧",
+        "url": "https://tieba.baidu.com"
+      },
+      {
+        "name": "QQ空间",
+        "url": "https://qzone.qq.com"
+      },
+      {
+        "name": "NGA",
+        "url": "https://bbs.nga.cn/"
+      },
+      {
+        "name": "京东",
+        "url": "https://www.jd.com/"
+      },
+      {
+        "name": "淘宝",
+        "url": "https://www.taobao.com/"
+      }
+    ]
+  },
+  {
+    "name": "游戏",
+    "icon": "./images/menu/game.svg",
+    "sites": [
+      {
+        "name": "STEAM",
+        "url": "https://store.steampowered.com"
+      },
+      {
+        "name": "Watt Toolkit",
+        "url": "https://steampp.net"
+      },
+      {
+        "name": "EPIC",
+        "url": "https://store.epicgames.com/zh-CN/"
+      },
+      {
+        "name": "月幕",
+        "url": "https://www.ymgal.games"
+      },
+      {
+        "name": "东方",
+        "url": "https://cn.thdog.moe"
+      }
+    ]
+  },
+  {
+    "name": "工具",
+    "icon": "./images/menu/toolkit.svg",
+    "sites": [
+      {
+        "name": "滴答清单",
+        "url": "https://dida365.com"
+      },
+      {
+        "name": "百度网盘",
+        "url": "https://pan.baidu.com"
+      },
+      {
+        "name": "阿里云盘",
+        "url": "https://aliyundrive.com"
+      },
+      {
+        "name": "天翼云盘",
+        "url": "https://cloud.189.cn"
+      },
+      {
+        "name": "蓝奏云",
+        "url": "https://up.woozooo.com"
+      },
+      {
+        "name": "SOJSON",
+        "url": "https://www.sojson.com"
+      },
+      {
+        "name": "Smallpdf",
+        "url": "https://smallpdf.com"
+      },
+      {
+        "name": "Convertio",
+        "url": "https://convertio.co"
+      },
+      {
+        "name": "演示研究所",
+        "url": "https://www.slidelab.cc/"
+      },
+      {
+        "name": "Earth",
+        "url": "https://earth.nullschool.net"
+      },
+      {
+        "name": "塔罗网",
+        "url": "https://www.taluo.me/"
+      },
+      {
+        "name": "Fish Audio",
+        "url": "https://fish.audio"
+      },
+      {
+        "name": "语音合成",
+        "url": "https://gsv.acgnai.top/",
+        "description": "在线推理服务由AI Hobbyist提供"
+      },
+      {
+        "name": "MikuTools",
+        "url": "https://okmiku.com/"
+      }
+    ]
+  },
+  {
+    "name": "编程",
+    "icon": "./images/menu/code.svg",
+    "sites": [
+      {
+        "name": "C#语法",
+        "url": "https://sunnieshine.gitbook.io/c-sharp-tutorial"
+      },
+      {
+        "name": "r2coding",
+        "url": "https://www.r2coding.com/#/"
+      },
+      {
+        "name": "MDUI",
+        "url": "https://www.mdui.org"
+      },
+      {
+        "name": ".NET",
+        "url": "https://docs.microsoft.com/zh-cn/dotnet"
+      },
+      {
+        "name": "NumPy",
+        "url": "https://numpy.org/doc/stable/reference/index.html"
+      },
+      {
+        "name": "pandas",
+        "url": "https://pandas.pydata.org/docs/reference/index.html"
+      },
+      {
+        "name": "ECharts",
+        "url": "https://echarts.apache.org/zh/index.html"
+      },
+      {
+        "name": "Gitee",
+        "url": "https://gitee.com/"
+      },
+      {
+        "name": "Carbon",
+        "url": "https://carbon.now.sh"
+      },
+      {
+        "name": "tuna",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com"
+      },
+      {
+        "name": "Y分钟速成X",
+        "url": "https://learnxinyminutes.com/"
+      }
+    ]
+  },
+  {
+    "name": "导航",
+    "icon": "./images/menu/page.svg",
+    "sites": [
+      {
+        "name": "万花筒",
+        "url": "https://0x3.com"
+      },
+      {
+        "name": "小白-白",
+        "url": "https://moedog.org"
+      },
+      {
+        "name": "烧风",
+        "url": "https://shao.fun/"
+      },
+      {
+        "name": "阿虚同学",
+        "url": "https://www.axutongxue.com"
+      },
+      {
+        "name": "Randy",
+        "url": "https://lutaonan.com"
+      },
+      {
+        "name": "羽翼城",
+        "url": "https://www.dogfight360.com/blog/"
+      },
+      {
+        "name": "magiconch",
+        "url": "https://lab.magiconch.com/"
+      },
+      {
+        "name": "ApacheCN",
+        "url": "https://docs.apachecn.org/"
+      },
+      {
+        "name": "CappuccinoZ",
+        "url": "https://cappuccinoz.github.io/"
+      }
+    ]
+  }
+]

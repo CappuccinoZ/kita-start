@@ -1,0 +1,16 @@
+---
+import ResourceCard from "./ResourceCard.astro";
+import type { ResourceItem } from "../scripts/index.ts";
+const { resource } = Astro.props;
+---
+
+<div class="resource-panel">
+  <div class="resource-name">
+    <h2 id={resource.name}>{resource.name}</h2>
+  </div>
+  <div class="resource-sites">
+    <ul>
+      {resource.sites.map((site: ResourceItem) => <ResourceCard site={site} />)}
+    </ul>
+  </div>
+</div>

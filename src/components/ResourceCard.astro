@@ -1,0 +1,40 @@
+---
+import type { string } from "astro:schema";
+
+const { site } = Astro.props;
+---
+
+<li>
+  <a class="card" href={site.url} target="_blank">
+    <div class="card-head">
+      <div class="site-image">
+        {
+          site.image ? (
+            <img src={site.image} alt={site.name} />
+          ) : (
+            <span class="letter">{site.name[0]}</span>
+          )
+        }
+      </div>
+      <div class="site-name">
+        <h3>{site.name}</h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="site-description">
+        <p>{site.description}</p>
+      </div>
+      {
+        site.tags?.length ? (
+          <div class="site-tags">
+            {site.tags.map((tag: string) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        ) : (
+          ""
+        )
+      }
+    </div>
+  </a>
+</li>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Sider from "../components/Sider.astro";
+import ResourcePanel from "../components/ResourcePanel.astro";
+import { resources, categories } from "../scripts/index.ts";
+const pageTitle = "Kita起始页";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<Sider categories={categories} />
+	{resources.map((resource) => <ResourcePanel resource={resource} />)}
+</BaseLayout>
