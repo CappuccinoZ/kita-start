@@ -4,16 +4,23 @@
   --color-base-200: oklch(98% 0 0);
   --color-base-300: oklch(95% 0 0);
   --color-base-content: oklch(21% 0.006 285.885);
-  --color-primary: #e60046;
+  --color-primary: oklch(59% 0.23 17.2);
   --color-primary-content: oklch(97% 0.013 17.38);
-  --color-secondary: #ff6496;
+  --color-primary-transparent: oklch(59% 0.23 17.2 / 0.3);
+  --color-secondary: oklch(71% 0.19 3.34);
   --color-secondary-content: oklch(40% 0.153 2.432);
+  --color-secondary-transparent: oklch(71% 0.19 3.34 / 0.3);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 54px;
 }
 
 body {
@@ -56,34 +63,63 @@ h6 {
   font-weight: 400;
 }
 
+.container {
+  width: 98%;
+  margin: 0 auto;
+
+  @media (width >=40rem) {
+    width: 95%;
+    max-width: 40rem;
+  }
+
+  @media (width >=48rem) {
+    width: 90%;
+    max-width: 48rem;
+  }
+
+  @media (width >=64rem) {
+    width: 85%;
+    max-width: 64rem;
+  }
+
+  @media (width >=80rem) {
+    width: 80%;
+    max-width: 80rem;
+  }
+
+  @media (width >=96rem) {
+    max-width: 96rem;
+  }
+}
+
 /* header部分 */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
   position: sticky;
   top: 0;
   z-index: 1;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 10px;
-  padding: 4px 8px;
   background-color: var(--color-base-100);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
 }
 
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
 /* logo部分 */
-header .logo {
+.header .logo {
   height: 50px;
   width: 50px;
 }
 
-header .logo h1 {
+.header .logo h1 {
   width: 100%;
   height: 100%;
 }
 
-header .logo h1 a {
+.header .logo h1 a {
   display: block;
   width: 100%;
   height: 100%;
@@ -94,86 +130,93 @@ header .logo h1 a {
 }
 
 /* navigation部分 */
-header .navigation {
+.header .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.header .navigation .nav-links ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .navigation ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-header .navigation li a {
+.header .navigation .nav-links li a {
   display: block;
-  padding: 0 8px 2px;
+  padding: 8px 16px;
   border-radius: 4px;
-  color: var(--color-primary-content);
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-base-content);
+  font-size: 18px;
+  color: var(--color-base-content);
 }
 
-header .navigation li a:hover {
-  border-color: var(--color-primary);
-}
-
-header .navigation .bars {
-  width: 28px;
-  height: 28px;
-  padding: 2px;
-  margin-left: 10px;
-  border-radius: 4px;
+.header .navigation .menu-btn {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 }
 
-header .navigation .bars:hover {
-  background-color: var(--color-base-300);
+.header .navigation .menu-btn:hover {
+  transform: scale(1.1);
 }
 
-header .navigation .bars svg {
-  width: 100%;
-  height: 100%;
+.header .navigation .menu-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* menu部分 */
+.header .navigation .menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+
+:has(.menu-btn[aria-expanded="true"]) .menu {
+  display: unset;
+}
+
+.header .navigation .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 150px;
+  padding: 4px 0;
+  border-radius: 8px;
+  border: 1px solid var(--color-base-300);
+  background-color: var(--color-base-100);
+}
+
+.header .navigation .menu li a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all .3s;
+}
+
+.header .navigation .menu li a:hover {
+  color: var(--color-secondary-content);
+  background-color: var(--color-secondary);
 }
 
 /* main部分 */
-main {
-  min-height: calc(100vh - 125px);
-}
-
-.container {
-  width: 100%;
-
-  @media (width >=40rem) {
-    max-width: 40rem;
-  }
-
-  @media (width >=48rem) {
-    max-width: 48rem;
-  }
-
-  @media (width >=64rem) {
-    max-width: 64rem;
-  }
-
-  @media (width >=80rem) {
-    max-width: 80rem;
-  }
-
-  @media (width >=96rem) {
-    max-width: 96rem;
-  }
+.main {
+  min-height: calc(100vh - 100px);
+  padding: 25px 0 50px;
+  background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp) no-repeat fixed center 35%/cover;
 }
 
 /* footer部分 */
-footer {
-  width: 100%;
-  height: 50px;
-  margin-top: 5px;
+.footer {
+  height: 44px;
+  line-height: 44px;
   text-align: center;
-  line-height: 50px;
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-content);
+  color: #eee;
+  background-color: #333;
 }

@@ -1,6 +1,6 @@
 ---
-import type { string } from "astro:schema";
-
+import "../styles/index.css";
+import { Image } from "astro:assets";
 const { site } = Astro.props;
 ---
 
@@ -10,7 +10,7 @@ const { site } = Astro.props;
       <div class="site-image">
         {
           site.image ? (
-            <img src={site.image} alt={site.name} />
+            <Image src={site.image} alt={site.name} width="32" height="32"} />
           ) : (
             <span class="letter">{site.name[0]}</span>
           )
@@ -21,18 +21,21 @@ const { site } = Astro.props;
       </div>
     </div>
     <div class="card-body">
-      <div class="site-description">
-        <p>{site.description}</p>
-      </div>
       {
-        site.tags?.length ? (
+        site.description && (
+          <div class="site-description">
+            <p>{site.description}</p>
+          </div>
+        )
+      }
+
+      {
+        site.tags && (
           <div class="site-tags">
             {site.tags.map((tag: string) => (
               <span class="tag">{tag}</span>
             ))}
           </div>
-        ) : (
-          ""
         )
       }
     </div>

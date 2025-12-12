@@ -1,12 +1,59 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Sider from "../components/Sider.astro";
+import SearchBox from "../components/SearchBox.astro";
 import ResourcePanel from "../components/ResourcePanel.astro";
 import { resources, categories } from "../scripts/index.ts";
 const pageTitle = "Kita起始页";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<Sider categories={categories} />
+<BaseLayout pageTitle={pageTitle} categories={categories}>
+	<SearchBox />
 	{resources.map((resource) => <ResourcePanel resource={resource} />)}
 </BaseLayout>
+
+<script>
+	// 切换菜单显示状态
+	const menuBtn = document.querySelector(".menu-btn");
+	menuBtn?.addEventListener("click", () => {
+		const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+		menuBtn.setAttribute("aria-expanded", `${!isExpanded}`);
+	});
+
+	// 搜索按钮点击事件
+	const searchBtn = document.querySelector(".search-btn");
+	const searchForm = document.querySelector(".search-form") as HTMLFormElement;
+	searchBtn?.addEventListener("click", () => {
+		searchForm.submit();
+	});
+
+	// 切换搜索引擎
+	const searchTabs = document.querySelectorAll(".tab-item");
+	const searchInput = document.querySelector(
+		".search-form input",
+	) as HTMLInputElement;
+
+	const searchEngines = {
+		bing: {
+			action: "https://cn.bing.com/search",
+			queryParam: "q",
+		},
+		baidu: {
+			action: "https://www.baidu.com/s",
+			queryParam: "wd",
+		},
+	};
+
+	searchTabs.forEach((tab) => {
+		tab.addEventListener("click", (e) => {
+			searchTabs.forEach((t) => t.classList.remove("active"));
+			const clickedTab = e.currentTarget as HTMLSpanElement;
+			clickedTab.classList.add("active");
+
+			const engine = clickedTab.dataset.engine;
+			if (engine && engine in searchEngines) {
+				searchForm.action = searchEngines[engine].action;
+				searchInput.name = searchEngines[engine].queryParam;
+			}
+		});
+	});
+</script>

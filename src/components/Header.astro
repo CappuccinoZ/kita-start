@@ -1,34 +1,46 @@
 ---
 import "../styles/global.css";
+import Menu from "./Menu.astro";
 const title = "Kita起始页";
+const { categories } = Astro.props;
 ---
 
-<header>
-  <div class="logo">
-    <h1>
-      <a href="index.html" title={title}>{title}</a>
-    </h1>
-  </div>
-
-  <nav class="navigation">
-    <ul>
-      <li><a href="/index.html">首页</a></li>
-      <li><a href="/about">关于</a></li>
-    </ul>
-
-    <div class="bars">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>
+        <a href="index.html" title={title}>{title}</a>
+      </h1>
     </div>
-  </nav>
+
+    <nav class="navigation">
+      <div class="nav-links">
+        <ul>
+          <li><a href="/index.html">首页</a></li>
+          <li><a href="/about">关于</a></li>
+        </ul>
+      </div>
+
+      {
+        categories && (
+          <div aria-expanded="false" aria-controls="main-menu" class="menu-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <Menu categories={categories} />
+        )
+      }
+    </nav>
+  </div>
 </header>
