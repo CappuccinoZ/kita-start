@@ -124,7 +124,7 @@ h6 {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: url(icon.png) no-repeat center/cover;
+  background: url(/icon.png) no-repeat center/cover;
   text-indent: -9999px;
   overflow: hidden;
 }
