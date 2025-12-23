@@ -1,12 +1,18 @@
 ---
-import "../styles/markdown.css";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="article">
-    <h1>{frontmatter.title}</h1>
-    <slot />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css"
+  />
+
+  <div class="mt-10 min-h-100 max-w-200 mx-auto p-12 bg-base-100 rounded-2xl">
+    <article class="markdown-body">
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </article>
   </div>
 </BaseLayout>

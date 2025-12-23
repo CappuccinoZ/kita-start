@@ -1,43 +1,43 @@
 ---
-import "../styles/index.css";
 import { Image } from "astro:assets";
 const { site } = Astro.props;
 ---
 
-<li>
-  <a class="card" href={site.url} target="_blank">
-    <div class="card-head">
-      <div class="site-image">
+<!-- 网站卡片 -->
+<a class="resource-card card h-full bg-base-100 rounded-xl shadow-md" href={site.url} target="_blank">
+  <div class="card-body py-4">
+    <div class="card-title">
+      <!-- 网站图片 -->
+      <div class="h-8 w-8 mr-3 rounded overflow-hidden">
         {
           site.image ? (
             <Image src={site.image} alt={site.name} width="32" height="32"} />
           ) : (
-            <span class="letter">{site.name[0]}</span>
+            <div class="text-lg leading-8 text-center text-primary-content bg-primary">{site.name[0]}</div>
           )
         }
       </div>
-      <div class="site-name">
-        <h3>{site.name}</h3>
-      </div>
-    </div>
-    <div class="card-body">
-      {
-        site.description && (
-          <div class="site-description">
-            <p>{site.description}</p>
-          </div>
-        )
-      }
 
-      {
-        site.tags && (
-          <div class="site-tags">
-            {site.tags.map((tag: string) => (
-              <span class="tag">{tag}</span>
-            ))}
-          </div>
-        )
-      }
+      <!-- 网站名称 -->
+      <h3 class="truncate">{site.name}</h3>
     </div>
-  </a>
-</li>
+
+    <!-- 网站描述 -->
+    {
+      site.description && (
+        <p class="line-clamp-3">{site.description}</p>
+      )
+    }
+
+    <!-- 网站标签 -->
+    {
+      site.tags && (
+        <div class="flex flex-wrap gap-2">
+          {site.tags.map((tag: string) => (
+            <div class="badge badge-primary rounded-full">{tag}</div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</a>

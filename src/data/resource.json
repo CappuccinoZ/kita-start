@@ -16,6 +16,17 @@
         "image": "https://cdn.aixifan.com/ico/favicon.ico"
       },
       {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/",
+        "image": "/img/youtube.png"
+      },
+      {
+        "name": "新番表",
+        "url": "https://yuc.wiki",
+        "description": "Yuc's Anime List",
+        "image": "https://yuc.wiki/images/32x32.png"
+      },
+      {
         "name": "AGE动漫",
         "url": "https://www.agedm.io/",
         "description": "在线动漫观看",
@@ -28,11 +39,6 @@
         "image": "https://www.silisilifun.com/favicon.ico?20190911"
       },
       {
-        "name": "YouTube",
-        "url": "https://www.youtube.com/",
-        "image": "https://favicon.im/www.youtube.com"
-      },
-      {
         "name": "萌番组",
         "url": "https://bangumi.moe"
       },
@@ -41,12 +47,6 @@
         "url": "https://mikanime.tv",
         "description": "Mikan Project",
         "image": "https://mikanime.tv/images/favicon.ico?v=2"
-      },
-      {
-        "name": "新番表",
-        "url": "https://yuc.wiki",
-        "description": "Yuc's Anime List",
-        "image": "https://yuc.wiki/images/32x32.png"
       },
       {
         "name": "VCB-S",
@@ -111,17 +111,17 @@
       {
         "name": "鸠摩",
         "url": "https://www.jiumodiary.com",
-        "image": "https://favicon.im/www.jiumodiary.com"
+        "image": "https://www.jiumodiary.com/images/favicon.png"
       },
       {
         "name": "Gutenberg",
         "url": "https://www.gutenberg.org",
-        "image": "https://favicon.im/www.gutenberg.org"
+        "image": "https://www.gutenberg.org/gutenberg/favicon.ico"
       },
       {
         "name": "轻小说文库",
         "url": "https://www.wenku8.net/index.php",
-        "image": "https://favicon.im/www.wenku8.net"
+        "image": "https://www.wenku8.net/favicon.ico"
       },
       {
         "name": "轻之国度",
@@ -239,7 +239,7 @@
       {
         "name": "pixiv",
         "url": "https://www.pixiv.net",
-        "image": "https://favicon.im/www.pixiv.net"
+        "image": "/img/pixiv.ico"
       },
       {
         "name": "萌图社",
@@ -305,7 +305,7 @@
       {
         "name": "X",
         "url": "https://twitter.com/home",
-        "image": "https://favicon.im/twitter.com"
+        "image": "/img/x.ico"
       },
       {
         "name": "贴吧",
@@ -427,7 +427,7 @@
       {
         "name": "Fish Audio",
         "url": "https://fish.audio",
-        "image": "https://favicon.im/fish.audio"
+        "image": "/img/fish.audio.ico"
       },
       {
         "name": "语音合成",

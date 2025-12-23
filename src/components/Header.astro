@@ -1,46 +1,57 @@
 ---
-import "../styles/global.css";
 import Menu from "./Menu.astro";
 const title = "Kita起始页";
 const { categories } = Astro.props;
 ---
 
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <h1>
-        <a href="index.html" title={title}>{title}</a>
-      </h1>
-    </div>
+<!-- 网站头部 -->
+<header class="navbar fixed top-0 z-10 h-16 py-0 gap-4 bg-base-100 shadow-md">
+  <Menu categories={categories} />
 
-    <nav class="navigation">
-      <div class="nav-links">
-        <ul>
-          <li><a href="/index.html">首页</a></li>
-          <li><a href="/about">关于</a></li>
-        </ul>
-      </div>
-
-      {
-        categories && (
-          <div aria-expanded="false" aria-controls="main-menu" class="menu-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
-          <Menu categories={categories} />
-        )
-      }
-    </nav>
+  <!-- logo -->
+  <div class="logo flex-1">
+    <h1 class="w-12.5 h-12.5">
+      <a
+        class="block w-full h-full rounded-lg -indent-999 overflow-hidden"
+        href="index.html"
+        title={title}>{title}</a
+      >
+    </h1>
   </div>
+
+  <label class="swap swap-rotate w-12 h-12 p-2">
+    <input type="checkbox" class="theme-controller" value="dark" />
+
+    <!-- 浅色模式 -->
+    <svg
+      class="swap-off w-8"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+      ></path>
+    </svg>
+
+    <!-- 深色模式 -->
+    <svg
+      class="swap-on w-8"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+      ></path>
+    </svg>
+  </label>
 </header>

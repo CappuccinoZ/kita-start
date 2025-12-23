@@ -1,222 +1,106 @@
-/* 公共样式 */
-:root {
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(98% 0 0);
   --color-base-300: oklch(95% 0 0);
   --color-base-content: oklch(21% 0.006 285.885);
-  --color-primary: oklch(59% 0.23 17.2);
-  --color-primary-content: oklch(97% 0.013 17.38);
-  --color-primary-transparent: oklch(59% 0.23 17.2 / 0.3);
-  --color-secondary: oklch(71% 0.19 3.34);
-  --color-secondary-content: oklch(40% 0.153 2.432);
-  --color-secondary-transparent: oklch(71% 0.19 3.34 / 0.3);
+  --color-primary: #D4594E;
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(51% 0.262 276.966);
+  --color-secondary-content: oklch(100% 0 0);
+  --color-accent: #BBC773;
+  --color-accent-content: oklch(21% 0.006 285.885);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: oklch(25.33% 0.016 252.42);
+  --color-base-200: oklch(23.26% 0.014 253.1);
+  --color-base-300: oklch(21.15% 0.012 254.09);
+  --color-base-content: oklch(97.807% 0.029 256.847);
+  --color-primary: #0087BD;
+  --color-primary-content: oklch(98% 0.019 200.873);
+  --color-secondary: oklch(51% 0.262 276.966);
+  --color-secondary-content: #d0d0d0;
+  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
 
+/* 平滑滚动 */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 54px;
+  scroll-padding-top: 64px;
 }
 
+/* body字体与背景 */
 body {
   font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif;
-  line-height: 1.5;
-  color: var(--color-base-content);
-  background-color: var(--color-base-200);
+  background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp) no-repeat fixed center 33%/cover;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
-em,
-i {
-  font-style: normal;
-}
-
-a {
-  color: var(--color-base-content);
-  text-decoration: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-}
-
-.container {
-  width: 98%;
-  margin: 0 auto;
-
-  @media (width >=40rem) {
-    width: 95%;
-    max-width: 40rem;
-  }
-
-  @media (width >=48rem) {
-    width: 90%;
-    max-width: 48rem;
-  }
-
-  @media (width >=64rem) {
-    width: 85%;
-    max-width: 64rem;
-  }
-
-  @media (width >=80rem) {
-    width: 80%;
-    max-width: 80rem;
-  }
-
-  @media (width >=96rem) {
-    max-width: 96rem;
-  }
-}
-
-/* header部分 */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: var(--color-base-100);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 56px;
-}
-
-/* logo部分 */
-.header .logo {
-  height: 50px;
-  width: 50px;
-}
-
-.header .logo h1 {
-  width: 100%;
-  height: 100%;
-}
-
-.header .logo h1 a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
+/* logo背景 */
+.logo h1 a {
   background: url(/icon.png) no-repeat center/cover;
-  text-indent: -9999px;
-  overflow: hidden;
 }
 
-/* navigation部分 */
-.header .navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
+/* 网站卡片动画 */
+.resource-card:hover {
+  animation: jump .3s;
 }
 
-.header .navigation .nav-links ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@keyframes jump {
 
-.header .navigation .nav-links li a {
-  display: block;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 18px;
-  color: var(--color-base-content);
-}
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-.header .navigation .menu-btn {
-  margin-left: 8px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.header .navigation .menu-btn:hover {
-  transform: scale(1.1);
-}
-
-.header .navigation .menu-btn svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* menu部分 */
-.header .navigation .menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  z-index: 1;
-}
-
-:has(.menu-btn[aria-expanded="true"]) .menu {
-  display: unset;
-}
-
-.header .navigation .menu ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 4px;
-  width: 150px;
-  padding: 4px 0;
-  border-radius: 8px;
-  border: 1px solid var(--color-base-300);
-  background-color: var(--color-base-100);
-}
-
-.header .navigation .menu li a {
-  display: block;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: all .3s;
-}
-
-.header .navigation .menu li a:hover {
-  color: var(--color-secondary-content);
-  background-color: var(--color-secondary);
-}
-
-/* main部分 */
-.main {
-  min-height: calc(100vh - 100px);
-  padding: 25px 0 50px;
-  background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp) no-repeat fixed center 35%/cover;
-}
-
-/* footer部分 */
-.footer {
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  color: #eee;
-  background-color: #333;
+  50% {
+    transform: translateY(-3px);
+  }
 }

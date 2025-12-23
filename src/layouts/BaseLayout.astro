@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import "../styles/snow.css";
+import Snow from "../components/Snow.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 const { pageTitle, categories } = Astro.props;
@@ -13,31 +13,16 @@ const { pageTitle, categories } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <!-- <style>
-      #app {
-        width: 350px;
-        height: 100vh;
-        margin: 0 auto;
-        overflow: auto;
-        scroll-behavior: smooth;
-        scroll-padding-top: 56px;
-      }
-    </style> -->
   </head>
 
   <body>
-    <div id="app">
-      <Header categories={categories} />
+    <Header categories={categories} />
 
-      <main class="main">
-        <div class="container">
-          <slot />
-        </div>
-      </main>
+    <main class="main min-h-screen container mx-auto px-4 lg:px-8 py-16">
+      <slot />
+    </main>
 
-      <Footer />
-    </div>
-
-    <script src="../scripts/snow.js"></script>
+    <Footer />
+    <Snow />
   </body>
 </html>

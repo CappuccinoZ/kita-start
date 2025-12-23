@@ -1,24 +1,29 @@
+// 获取随机数
+const getRandom = (min, max) => min + Math.random() * (max - min)
+
 // 下雪效果
 function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.innerHTML = '❄'; // 雪花的图标可以更改
+    const snowflake = document.createElement('div')
+    snowflake.classList.add('snowflake')
+    snowflake.innerHTML = '❄'
 
-    const size = Math.random() * 20 + 10; // 雪花大小范围
-    let initialX = (Math.random() * 1.618 - 0.618) * window.innerWidth;
+    // 雪花大小与初始位置
+    const size = getRandom(10, 24)
+    const initialX = getRandom(-0.618 * window.innerHeight, window.innerWidth)
 
-    snowflake.style.fontSize = `${size}px`;
-    snowflake.style.left = `${initialX}px`;
+    snowflake.style.fontSize = `${size}px`
+    snowflake.style.left = `${initialX}px`
 
-    document.body.appendChild(snowflake);
+    const snowArea = document.querySelector(".snow-area");
+    snowArea.appendChild(snowflake);
 
     setTimeout(() => {
-        snowflake.remove();
-    }, 10000); // 与动画时间一致
+        snowflake.remove()
+    }, 10000) // 与动画时间一致
 }
 
 function snowfall() {
-    setInterval(createSnowflake, 300); // 控制雪花的生成速度
+    setInterval(createSnowflake, 300) // 控制雪花的生成速度
 }
 
-snowfall();
+snowfall()

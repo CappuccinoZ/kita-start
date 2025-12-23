@@ -1,18 +1,59 @@
 ---
-import "../styles/index.css";
 const { categories } = Astro.props;
 ---
 
-<aside id="main-menu" class="menu">
-  <ul>
-    {
-      categories.map((category: string) => (
-        <li>
-          <a href={"#" + category}>{category}</a>
-        </li>
-      ))
-    }
-  </ul>
-</aside>
+<!-- 菜单 -->
+<div class="drawer w-12">
+  <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <label for="menu-drawer" class="btn btn-ghost drawer-button w-12 h-12 p-2">
+      <svg
+        class="w-8"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </label>
+  </div>
+  <div class="drawer-side">
+    <label for="menu-drawer" aria-label="close sidebar" class="drawer-overlay"
+    ></label>
 
-<script></script>
+    <ul class="menu bg-base-200 min-h-full w-80 p-4">
+      <li><a href="/index.html">首页</a></li>
+      {
+        categories && (
+          <li>
+            <span>分类</span>
+            <ul>
+              {categories.map((category: string) => (
+                <li>
+                  <a href={"#" + category}>{category}</a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        )
+      }
+      <li><a href="/about">关于</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const links = document.querySelectorAll(".drawer-side a");
+  const drawerToggle = document.querySelector(".drawer-toggle");
+
+  links.forEach((link) => {
+    link.addEventListener("click", function () {
+      drawerToggle.checked = false;
+    });
+  });
+</script>

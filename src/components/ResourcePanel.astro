@@ -1,17 +1,29 @@
 ---
-import "../styles/index.css";
 import ResourceCard from "./ResourceCard.astro";
 import type { ResourceItem } from "../scripts/index.ts";
 const { resource } = Astro.props;
 ---
 
-<div class="resource-panel">
-  <div class="resource-name">
-    <h2 id={resource.name}>{resource.name}</h2>
-  </div>
-  <div class="resource-sites">
-    <ul>
-      {resource.sites.map((site: ResourceItem) => <ResourceCard site={site} />)}
-    </ul>
-  </div>
+<!-- 网站分类 -->
+<div class="resource-panel mt-10">
+  <!-- 分类名称 -->
+  <h2
+    class="text-secondary-content mb-3 text-xl font-semibold"
+    id={resource.name}
+  >
+    {resource.name}
+  </h2>
+
+  <!-- 网站卡片列表 -->
+  <ul
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"
+  >
+    {
+      resource.sites.map((site: ResourceItem) => (
+        <li>
+          <ResourceCard site={site} />
+        </li>
+      ))
+    }
+  </ul>
 </div>
