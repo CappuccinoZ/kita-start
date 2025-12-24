@@ -2,7 +2,10 @@
 <div class="search-box flex items-center justify-center h-[62vh]">
   <div class="w-full max-w-200">
     <!-- 搜索引擎 -->
-    <select class="select w-20 h-11 px-4 mb-2 rounded-full text-base">
+    <select
+      class="select w-20 h-11 px-4 mb-2 rounded-full text-base"
+      id="search-engine"
+    >
       <option selected value="bing">必应</option>
       <option value="baidu">百度</option>
       <option value="google">谷歌</option>
@@ -17,6 +20,7 @@
       <input
         type="search"
         class="input flex-1 h-full px-5 border-2 border-base-100 text-base bg-transparent text-secondary-content focus:bg-base-100/80 focus:text-base-content placeholder:text-secondary-content/80 focus:placeholder:text-base-content/80 rounded-l-full outline-0 transition duration-300"
+        id="search-content"
         placeholder="Search"
         autocomplete="off"
       />
@@ -60,11 +64,11 @@
 
   // 设置搜索引擎
   function setSearchEngine(action: string, name: string) {
-    const searchForm = document.querySelector(
-      ".search-form",
+    const searchForm = document.getElementById(
+      "search-form",
     ) as HTMLFormElement;
-    const searchContentInput = document.querySelector(
-      ".search-content",
+    const searchContentInput = document.getElementById(
+      "search-content",
     ) as HTMLInputElement;
 
     searchForm.action = action;
@@ -76,8 +80,8 @@
   setSearchEngine(defaultEngine.action, defaultEngine.queryParam);
 
   // 切换搜索引擎
-  const searchEngineSelect = document.querySelector(
-    ".search-engine",
+  const searchEngineSelect = document.getElementById(
+    "search-engine",
   ) as HTMLSelectElement;
   searchEngineSelect?.addEventListener("change", (e) => {
     const engine = searchEngines[searchEngineSelect.value];

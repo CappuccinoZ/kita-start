@@ -1,0 +1,310 @@
+---
+const { initialData = [] } = Astro.props;
+---
+
+<div
+  class="mt-10 min-h-screen p-4 md:p-12 bg-base-200 rounded-3xl text-base-content"
+>
+  <div class="max-w-6xl mx-auto">
+    <div
+      class="flex justify-between items-center mb-8 bg-base-100 p-6 rounded-2xl shadow-sm border border-base-300"
+    >
+      <div>
+        <h2 class="text-2xl font-bold text-primary italic tracking-tight">
+          网站编辑器
+        </h2>
+        <p class="text-sm opacity-60">拖动 ⠿ 进行排序 · 点击图标智能更换</p>
+      </div>
+      <button
+        id="exportBtn"
+        class="btn btn-primary px-8 shadow-md hover:scale-105 transition-all"
+        >导出 JSON</button
+      >
+    </div>
+
+    <div id="editor-root" class="space-y-6">
+      {
+        initialData.map((category, catIdx) => (
+          <details
+            open
+            class="group collapse collapse-arrow border border-base-300 bg-base-100 shadow-sm rounded-xl overflow-visible"
+          >
+            <summary class="collapse-title text-lg font-bold flex items-center gap-3 select-none">
+              <span
+                id={`badge-${catIdx}`}
+                class="badge badge-primary badge-outline font-mono"
+              >
+                {category.sites.length}
+              </span>
+              <span>{category.name}</span>
+            </summary>
+
+            <div class="collapse-content overflow-visible px-4 pb-4">
+              <div class="overflow-x-auto overflow-y-visible">
+                <table class="table table-zebra w-full">
+                  <thead>
+                    <tr class="text-base-content/50 border-b border-base-200">
+                      <th class="w-8" />
+                      <th class="w-12">#</th>
+                      <th class="w-48">名称</th>
+                      <th>URL</th>
+                      <th class="w-16 text-center">图标</th>
+                      <th>描述</th>
+                      <th class="w-20 text-center text-error">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody id={`tbody-${catIdx}`} data-cat-idx={catIdx}>
+                    {category.sites.map((site, siteIdx) => (
+                      <tr class="hover:bg-base-200/50 transition-colors group/row">
+                        <td class="cursor-move text-base-300 hover:text-primary transition-colors select-none">
+                          ⠿
+                        </td>
+                        <th class="row-number opacity-30 font-mono text-xs">
+                          {siteIdx + 1}
+                        </th>
+                        <td>
+                          <input
+                            type="text"
+                            class="input input-ghost input-sm w-full font-medium focus:bg-base-100"
+                            value={site.name}
+                            oninput="updateData(this, 'name')"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="input input-ghost input-sm w-full text-primary focus:bg-base-100"
+                            value={site.url}
+                            oninput="updateData(this, 'url')"
+                          />
+                        </td>
+                        <td class="flex justify-center">
+                          <button
+                            class="btn btn-ghost btn-circle btn-sm border border-base-300 shadow-sm hover:border-primary transition-all"
+                            onclick="openIconModal(this)"
+                          >
+                            <div class="w-7 rounded bg-white overflow-hidden p-0.5">
+                              <img
+                                src={site.image || "/favicon.ico"}
+                                class="site-icon-preview object-contain w-full h-full"
+                                onerror="this.src='https://www.google.com/s2/favicons?sz=64&domain=google.com'"
+                              />
+                            </div>
+                          </button>
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            class="input input-ghost input-sm w-full opacity-70 focus:bg-base-100"
+                            value={site.description || ""}
+                            oninput="updateData(this, 'description')"
+                          />
+                        </td>
+                        <td class="text-center">
+                          <button
+                            class="btn btn-ghost btn-xs text-error opacity-0 group-hover/row:opacity-100 transition-opacity"
+                            onclick="deleteSite(this)"
+                          >
+                            删除
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <button
+                class="btn btn-dashed btn-sm w-full mt-4 border-primary/20 hover:border-primary hover:bg-primary/5 text-primary/70"
+                onclick={`addSite(${catIdx})`}
+              >
+                + 添加新站点
+              </button>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <dialog id="icon_modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box border border-base-300">
+      <h3 class="font-bold text-lg">更换站点图标</h3>
+      <p class="py-4 text-sm opacity-60 italic">点击下方按钮获取图标：</p>
+      <div class="grid grid-cols-1 gap-3">
+        <button
+          class="btn btn-outline text-left justify-start gap-4"
+          onclick="applyIconChange('favicon')"
+        >
+          <span class="text-xl">🌐</span> 域名 Favicon (直接从原站获取)
+        </button>
+        <button
+          class="btn btn-outline text-left justify-start gap-4"
+          onclick="applyIconChange('api')"
+        >
+          <span class="text-xl">✨</span> 智能 API (通过 Kucat 接口获取)
+        </button>
+        <button
+          class="btn btn-outline text-left justify-start gap-4"
+          onclick="applyIconChange('manual')"
+        >
+          <span class="text-xl">📝</span> 手动输入地址 (输入图片直链)
+        </button>
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">取消</button>
+        </form>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop bg-black/40 backdrop-blur-sm">
+      <button>close</button>
+    </form>
+  </dialog>
+</div>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+<script is:inline define:vars={{ initialData }}>
+  let currentData = JSON.parse(JSON.stringify(initialData));
+  let activeEditRef = null; // 存储当前正在编辑哪一行的引用
+
+  // 初始化排序
+  function initSortable() {
+    currentData.forEach((_, idx) => {
+      const el = document.getElementById(`tbody-${idx}`);
+      Sortable.create(el, {
+        handle: ".cursor-move",
+        animation: 250,
+        ghostClass: "bg-primary/5",
+        onEnd: (evt) => {
+          const catIdx = evt.from.dataset.catIdx;
+          const [movedItem] = currentData[catIdx].sites.splice(evt.oldIndex, 1);
+          currentData[catIdx].sites.splice(evt.newIndex, 0, movedItem);
+          refreshRowNumbers(evt.from);
+        },
+      });
+    });
+  }
+
+  // 1. 打开模态框并记录位置
+  window.openIconModal = (btnEl) => {
+    const row = btnEl.closest("tr");
+    const tbody = row.parentNode;
+    activeEditRef = {
+      catIdx: tbody.dataset.catIdx,
+      siteIdx: Array.from(tbody.children).indexOf(row),
+      rowEl: row,
+    };
+    document.getElementById("icon_modal").showModal();
+  };
+
+  // 2. 执行图标更换逻辑
+  window.applyIconChange = (type) => {
+    if (!activeEditRef) return;
+    const { catIdx, siteIdx, rowEl } = activeEditRef;
+    const site = currentData[catIdx].sites[siteIdx];
+
+    if (!site.url && type !== "manual") return alert("请先填写网站 URL");
+
+    let newImg = "";
+    try {
+      const urlStr = site.url.trim();
+      const formattedUrl = urlStr.startsWith("http")
+        ? urlStr
+        : "https://" + urlStr;
+      const urlObj = new URL(formattedUrl);
+
+      if (type === "favicon") newImg = `${urlObj.origin}/favicon.ico`;
+      if (type === "api")
+        newImg = `https://ico.kucat.cn/get.php?url=${urlObj.href}`;
+      if (type === "manual")
+        newImg = prompt("请输入图标 URL:", site.image || "");
+
+      if (newImg) {
+        site.image = newImg;
+        rowEl.querySelector(".site-icon-preview").src = newImg;
+        document.getElementById("icon_modal").close();
+      }
+    } catch (e) {
+      alert("网址格式无效，请检查 URL 栏");
+    }
+  };
+
+  window.updateData = (inputEl, key) => {
+    const row = inputEl.closest("tr");
+    const tbody = row.parentNode;
+    const siteIdx = Array.from(tbody.children).indexOf(row);
+    currentData[tbody.dataset.catIdx].sites[siteIdx][key] = inputEl.value;
+  };
+
+  window.deleteSite = (btnEl) => {
+    if (!confirm("确定删除吗？")) return;
+    const row = btnEl.closest("tr");
+    const tbody = row.parentNode;
+    currentData[tbody.dataset.catIdx].sites.splice(
+      Array.from(tbody.children).indexOf(row),
+      1,
+    );
+    row.remove();
+    refreshRowNumbers(tbody);
+  };
+
+  window.addSite = (catIdx) => {
+    const tbody = document.getElementById(`tbody-${catIdx}`);
+    currentData[catIdx].sites.push({
+      name: "",
+      url: "",
+      description: "",
+      image: "",
+    });
+
+    const tr = document.createElement("tr");
+    tr.className = "hover:bg-base-200/50 transition-colors group/row";
+    tr.innerHTML = `
+      <td class="cursor-move text-base-300 hover:text-primary transition-colors select-none">⠿</td>
+      <th class="row-number opacity-30 font-mono text-xs">0</th>
+      <td><input type="text" class="input input-ghost input-sm w-full font-medium focus:bg-base-100" placeholder="站点名称" oninput="updateData(this, 'name')" /></td>
+      <td><input type="text" class="input input-ghost input-sm w-full text-primary focus:bg-base-100" placeholder="url" oninput="updateData(this, 'url')" /></td>
+      <td class="flex justify-center">
+        <button class="btn btn-ghost btn-circle btn-sm border border-base-300 shadow-sm hover:border-primary" onclick="openIconModal(this)">
+          <div class="w-7 rounded bg-white overflow-hidden p-0.5"><img src="/favicon.ico" class="site-icon-preview object-contain w-full h-full" /></div>
+        </button>
+      </td>
+      <td><input type="text" class="input input-ghost input-sm w-full opacity-70 focus:bg-base-100" placeholder="备注..." oninput="updateData(this, 'description')" /></td>
+      <td class="text-center"><button class="btn btn-ghost btn-xs text-error opacity-0 group-hover/row:opacity-100 transition-opacity" onclick="deleteSite(this)">删除</button></td>
+    `;
+    tbody.appendChild(tr);
+    refreshRowNumbers(tbody);
+    tr.querySelectorAll("input")[0].focus();
+  };
+
+  function refreshRowNumbers(tbody) {
+    const catIdx = tbody.dataset.catIdx;
+    const rows = tbody.querySelectorAll("tr");
+    rows.forEach((r, i) => (r.querySelector(".row-number").innerText = i + 1));
+    document.getElementById(`badge-${catIdx}`).innerText = rows.length;
+  }
+
+  document.getElementById("exportBtn").onclick = () => {
+    console.log("--- 最终导出的 JSON 数据 ---");
+    console.log(JSON.stringify(currentData, null, 2));
+    alert("JSON 已生成！请打开控制台 (F12) 复制内容。");
+  };
+
+  initSortable();
+</script>
+
+<style>
+  /* 解决表格内输入框聚焦效果 */
+  .input-ghost:focus {
+    border-color: hsl(var(--p)) !important;
+    outline: none;
+    box-shadow: 0 0 0 1px hsl(var(--p) / 0.2);
+  }
+  /* 防止表格被裁剪 */
+  .overflow-y-visible {
+    overflow-y: visible !important;
+  }
+</style>
