@@ -1,18 +1,27 @@
 ---
+import "../styles/github-markdown.css";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css"
-  />
-
   <div class="mt-10 min-h-100 max-w-200 mx-auto p-12 bg-base-100 rounded-2xl">
     <article class="markdown-body">
-      <h1>{frontmatter.title}</h1>
+      <h2>{frontmatter.title}</h2>
       <slot />
     </article>
   </div>
+
+  <div class="mt-10 max-w-200 mx-auto p-12 bg-base-100 rounded-2xl">
+    <div
+      id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="35db419c-a6f0-4501-977e-3e4423c37e44"
+      data-page-id="Kita Start"
+      data-page-url="https://start.kitakita.top/about"
+      data-page-title="Kita起始页"
+    >
+    </div>
+  </div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </BaseLayout>

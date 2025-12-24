@@ -20,7 +20,7 @@ const { resource } = Astro.props;
   >
     {
       resource.sites.map((site: ResourceItem) => (
-        <li>
+        <li class="animate-jump">
           <ResourceCard site={site} />
         </li>
       ))

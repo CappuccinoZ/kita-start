@@ -4,16 +4,22 @@ const { site } = Astro.props;
 ---
 
 <!-- 网站卡片 -->
-<a class="resource-card card h-full bg-base-100 rounded-xl shadow-md" href={site.url} target="_blank">
+<a
+  class="resource-card card h-full bg-base-100 rounded-xl shadow-md"
+  href={site.url}
+  target="_blank"
+>
   <div class="card-body py-4">
     <div class="card-title">
       <!-- 网站图片 -->
       <div class="h-8 w-8 mr-3 rounded overflow-hidden">
         {
           site.image ? (
-            <Image src={site.image} alt={site.name} width="32" height="32"} />
+            <Image src={site.image} alt={site.name} width="32" height="32" />
           ) : (
-            <div class="text-lg leading-8 text-center text-primary-content bg-primary">{site.name[0]}</div>
+            <div class="text-lg leading-8 text-center text-primary-content bg-primary">
+              {site.name[0]}
+            </div>
           )
         }
       </div>
@@ -23,11 +29,7 @@ const { site } = Astro.props;
     </div>
 
     <!-- 网站描述 -->
-    {
-      site.description && (
-        <p class="line-clamp-3">{site.description}</p>
-      )
-    }
+    {site.description && <p class="line-clamp-3">{site.description}</p>}
 
     <!-- 网站标签 -->
     {

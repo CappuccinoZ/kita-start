@@ -88,19 +88,21 @@ body {
   background: url(/icon.png) no-repeat center/cover;
 }
 
-/* 网站卡片动画 */
-.resource-card:hover {
-  animation: jump .3s;
-}
-
-@keyframes jump {
-
-  0%,
-  100% {
-    transform: translateY(0);
+/* 弹跳动画 */
+@layer components {
+  .animate-jump:hover>* {
+    animation: jump .3s;
   }
 
-  50% {
-    transform: translateY(-3px);
+  @keyframes jump {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-3px);
+    }
   }
 }
