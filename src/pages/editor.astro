@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteEditor from "../components/SiteEditor.astro";
+import SiteEditor from "../components/SiteEditor.jsx";
 
 const pageTitle = "Kita起始页";
 import { resources } from "../scripts/index.ts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <SiteEditor initialData={resources} />
+  <SiteEditor initialData={resources} client:load />
 </BaseLayout>
