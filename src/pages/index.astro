@@ -1,12 +1,7 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import SearchBox from "../components/SearchBox.astro";
-import ResourcePanel from "../components/ResourcePanel.astro";
-import { resources, categories } from "../scripts/index.ts";
-const pageTitle = "Kita起始页";
+import ResourceLayout from "../layouts/ResourceLayout.astro";
+import resourceJson from "../data/index-resource.json";
+const pageTitle = "Kita起始页 - 首页";
 ---
 
-<BaseLayout pageTitle={pageTitle} categories={categories}>
-	<SearchBox />
-	{resources.map((resource) => <ResourcePanel resource={resource} />)}
-</BaseLayout>
+<ResourceLayout pageTitle={pageTitle} resources={resourceJson} />

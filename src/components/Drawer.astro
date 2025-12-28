@@ -1,20 +1,22 @@
 ---
-import Menu from "./Menu.astro";
 const title = "Kita起始页";
 const url = "https://start.kitakita.top";
+
+interface Props {
+  categories: string[];
+}
 const { categories } = Astro.props;
 ---
 
-<!-- 网站头部 -->
 <div class="drawer">
-  <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
+  <input id="drawer" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <!-- 导航栏 -->
     <header class="navbar fixed z-10 py-0 gap-2 bg-base-100 shadow-md">
       <!-- 菜单按钮 -->
-      <div class="flex-none lg:hidden">
+      <div class="flex-none lg:hidden tooltip tooltip-bottom" data-tip="菜单">
         <label
-          for="menu-drawer"
+          for="drawer"
           aria-label="open sidebar"
           class="btn btn-square btn-ghost"
         >
@@ -46,13 +48,22 @@ const { categories } = Astro.props;
 
       <!-- 导航栏菜单 -->
       <div class="hidden flex-none lg:block">
-        <Menu categories={categories} mobile="false" />
+        <ul class="menu menu-horizontal">
+          <li>
+            <a href="/index.html">首页</a>
+          </li>
+          <li>
+            <a href="/channel/code">编程</a>
+          </li>
+          <li>
+            <a href="/about">关于</a>
+          </li>
+        </ul>
       </div>
 
       <!-- 主题切换按钮 -->
-      <div class="flex-none">
+      <div class="flex-none tooltip tooltip-bottom" data-tip="切换主题">
         <label class="swap swap-rotate p-2">
-          <!-- this hidden checkbox controls the state -->
           <input type="checkbox" class="theme-controller" value="dark" />
 
           <!-- 浅色模式 -->
@@ -79,25 +90,49 @@ const { categories } = Astro.props;
         </label>
       </div>
     </header>
+
+    <slot />
   </div>
 
   <!-- 侧边栏菜单 -->
   <div class="drawer-side lg:hidden">
-    <label for="menu-drawer" aria-label="close sidebar" class="drawer-overlay"
+    <label for="drawer" aria-label="close sidebar" class="drawer-overlay"
     ></label>
-    <Menu categories={categories} mobile="true" />
+    <ul class="menu bg-base-100 min-h-full w-80 p-4">
+      <li>
+        <a href="/index.html">首页</a>
+      </li>
+      {
+        categories && categories.length > 0 && (
+          <li>
+            <details open>
+              <summary>分类</summary>
+              <ul>
+                {categories.map((category) => (
+                  <li>
+                    <a href={"#" + category}>{category}</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </li>
+        )
+      }
+      <li>
+        <a href="/channel/code">编程</a>
+      </li>
+      <li>
+        <a href="/about">关于</a>
+      </li>
+    </ul>
   </div>
 </div>
 
 <script>
-  const links = document.querySelectorAll(
-    ".drawer-side a",
-  ) as NodeListOf<HTMLAnchorElement>;
-  const drawerToggle = document.querySelector(
-    ".drawer-toggle",
-  ) as HTMLInputElement;
+  const links = document.querySelectorAll(".drawer-side a");
+  const drawerToggle = document.getElementById("drawer") as HTMLInputElement;
 
-  links.forEach((link: HTMLAnchorElement) => {
+  links.forEach((link) => {
     link.addEventListener("click", function () {
       if (drawerToggle.checked === true) {
         drawerToggle.checked = false;

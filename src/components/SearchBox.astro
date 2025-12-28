@@ -1,19 +1,20 @@
 <!-- 搜索框 -->
-<div class="search-box flex items-center justify-center h-[62vh]">
+<div class="search-box flex items-center justify-center h-[68vh]">
   <div class="w-full max-w-200">
     <!-- 搜索引擎 -->
     <select
-      class="select w-20 h-11 px-4 mb-2 rounded-full text-base"
+      class="select w-20 h-10 px-4 mb-2 rounded-full text-base"
       id="search-engine"
     >
       <option selected value="bing">必应</option>
       <option value="baidu">百度</option>
       <option value="google">谷歌</option>
+      <option value="zhihu">知乎</option>
     </select>
 
     <!-- 搜索内容 -->
     <form
-      class="flex items-center h-12.5 w-full"
+      class="flex items-center relative h-12 w-full"
       id="search-form"
       target="_blank"
     >
@@ -47,23 +48,31 @@
 
 <script>
   // 搜索引擎信息
-  const searchEngines = {
-    bing: {
+  const searchEngines = [
+    {
+      name: "bing",
       action: "https://cn.bing.com/search",
       queryParam: "q",
     },
-    baidu: {
+    {
+      name: "baidu",
       action: "https://www.baidu.com/s",
       queryParam: "wd",
     },
-    google: {
+    {
+      name: "google",
       action: "https://www.google.com/search",
       queryParam: "q",
     },
-  };
+    {
+      name: "zhihu",
+      action: "https://www.zhihu.com/search",
+      queryParam: "q",
+    },
+  ];
 
   // 设置搜索引擎
-  function setSearchEngine(action: string, name: string) {
+  function setSearchEngine(action: string, queryParam: string) {
     const searchForm = document.getElementById(
       "search-form",
     ) as HTMLFormElement;
@@ -72,19 +81,21 @@
     ) as HTMLInputElement;
 
     searchForm.action = action;
-    searchContentInput.name = name;
+    searchContentInput.name = queryParam;
   }
 
   // 默认搜索引擎
-  const defaultEngine = searchEngines["bing"];
+  const defaultEngine = searchEngines[0];
   setSearchEngine(defaultEngine.action, defaultEngine.queryParam);
 
   // 切换搜索引擎
   const searchEngineSelect = document.getElementById(
     "search-engine",
   ) as HTMLSelectElement;
-  searchEngineSelect?.addEventListener("change", (e) => {
-    const engine = searchEngines[searchEngineSelect.value];
+  searchEngineSelect.addEventListener("change", (e) => {
+    const engine =
+      searchEngines.find((item) => item.name === searchEngineSelect.value) ||
+      searchEngines[0];
     setSearchEngine(engine.action, engine.queryParam);
   });
 </script>

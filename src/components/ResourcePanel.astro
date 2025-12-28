@@ -1,11 +1,15 @@
 ---
 import ResourceCard from "./ResourceCard.astro";
-import type { ResourceItem } from "../scripts/index.ts";
+
+import type { Resource } from "../scripts/resource-type";
+interface Props {
+  resource: Resource;
+}
 const { resource } = Astro.props;
 ---
 
 <!-- 网站分类 -->
-<div class="resource-panel mt-10">
+<div class="resource-panel mb-10">
   <!-- 分类名称 -->
   <h2
     class="text-secondary-content mb-3 text-xl font-semibold"
@@ -16,10 +20,10 @@ const { resource } = Astro.props;
 
   <!-- 网站卡片列表 -->
   <ul
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3"
   >
     {
-      resource.sites.map((site: ResourceItem) => (
+      resource.sites.map((site) => (
         <li class="animate-jump">
           <ResourceCard site={site} />
         </li>

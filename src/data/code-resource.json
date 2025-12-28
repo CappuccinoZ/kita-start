@@ -1,0 +1,144 @@
+[
+  {
+    "name": "AI工具",
+    "sites": [
+      {
+        "name": "DeepSeek",
+        "url": "https://chat.deepseek.com/"
+      },
+      {
+        "name": "豆包",
+        "url": "https://www.doubao.com/chat/"
+      },
+      {
+        "name": "Gemini",
+        "url": "https://gemini.google.com/app",
+        "image": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+      },
+      {
+        "name": "AI工具集",
+        "url": "https://ai-bot.cn/",
+        "image": "https://ai-bot.cn/wp-content/uploads/2023/03/ai-bot-square-logo.png"
+      },
+      {
+        "name": "Fish Audio",
+        "url": "https://fish.audio",
+        "image": "/img/fish.audio.ico"
+      },
+      {
+        "name": "AI Hobbyist TTS",
+        "url": "https://gsv.acgnai.top/",
+        "description": "在线语音合成"
+      }
+    ]
+  },
+  {
+    "name": "开发者资源",
+    "sites": [
+      {
+        "name": "Github",
+        "url": "https://github.com/"
+      },
+      {
+        "name": "LINUX DO",
+        "url": "https://linux.do/",
+        "image": "/img/linux.do.png"
+      },
+      {
+        "name": "MDN",
+        "url": "https://developer.mozilla.org/zh-CN/"
+      },
+      {
+        "name": "代码随想录",
+        "url": "https://www.programmercarl.com/"
+      },
+      {
+        "name": "r2coding",
+        "url": "https://www.r2coding.com/#/README"
+      },
+      {
+        "name": "Y分钟速成X",
+        "url": "https://learnxinyminutes.com/"
+      },
+      {
+        "name": "tuna",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/"
+      },
+      {
+        "name": "Bing Webmaster Tools",
+        "url": "https://www.bing.com/webmasters/"
+      },
+      {
+        "name": "QuestMobile报告",
+        "url": "https://www.questmobile.com.cn/research/reports"
+      }
+    ]
+  },
+  {
+    "name": "云服务",
+    "sites": [
+      {
+        "name": "Cloudflare",
+        "url": "https://dash.cloudflare.com/login?lang=zh-hans-cn"
+      },
+      {
+        "name": "Vercel",
+        "url": "https://vercel.com"
+      },
+      {
+        "name": "腾讯云",
+        "url": "https://cloud.tencent.com/"
+      },
+      {
+        "name": "阿里云",
+        "url": "https://www.aliyun.com/"
+      },
+      {
+        "name": "NameSilo",
+        "url": "https://www.namesilo.com/",
+        "image": "https://www.namesilo.com/favicon.ico"
+      },
+      {
+        "name": "智算云扉",
+        "url": "https://waas.aigate.cc"
+      }
+    ]
+  },
+  {
+    "name": "开发框架与库",
+    "sites": [
+      {
+        "name": "Vue.js",
+        "url": "https://cn.vuejs.org/"
+      },
+      {
+        "name": "Nuxt",
+        "url": "https://nuxt.com/"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com/"
+      },
+      {
+        "name": "daisyUI",
+        "url": "https://daisyui.com/?lang=zh_hans"
+      },
+      {
+        "name": "MDUI",
+        "url": "https://www.mdui.org"
+      },
+      {
+        "name": "NumPy",
+        "url": "https://numpy.org/"
+      },
+      {
+        "name": "pandas",
+        "url": "https://pandas.pydata.org/"
+      },
+      {
+        "name": "ECharts",
+        "url": "https://echarts.apache.org/zh/index.html"
+      }
+    ]
+  }
+]

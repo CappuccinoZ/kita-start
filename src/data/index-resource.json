@@ -1,0 +1,330 @@
+[
+  {
+    "name": "影视 / 动漫",
+    "sites": [
+      {
+        "name": "Bilibili",
+        "url": "https://www.bilibili.com",
+        "description": "哔哩哔哩 (゜-゜)つロ 干杯~",
+        "loading": "eager"
+      },
+      {
+        "name": "AcFun",
+        "url": "https://www.acfun.cn",
+        "description": "Acfun弹幕视频网",
+        "image": "https://cdn.aixifan.com/ico/favicon.ico",
+        "loading": "eager"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com",
+        "description": "油管，视频分享网站",
+        "image": "/img/youtube.png",
+        "loading": "eager"
+      },
+      {
+        "name": "AGE 动漫",
+        "url": "https://www.agedm.io",
+        "description": "在线动漫",
+        "loading": "eager"
+      },
+      {
+        "name": "嘶哩嘶哩",
+        "url": "https://www.silisilifun.com",
+        "description": "「silisilinb」"
+      },
+      {
+        "name": "Kazumi",
+        "url": "https://kazumi.app/",
+        "description": "看番软件"
+      },
+      {
+        "name": "长门番堂",
+        "url": "https://yuc.wiki",
+        "description": "查看新番表"
+      },
+      {
+        "name": "Bangumi 番组计划",
+        "url": "https://bangumi.tv/",
+        "description": "ACG 资料库"
+      },
+      {
+        "name": "蜜柑计划",
+        "url": "https://mikanime.tv",
+        "description": "动画资源站"
+      },
+      {
+        "name": "Anime Garden",
+        "url": "https://animes.garden/",
+        "description": "动画资源站"
+      },
+      {
+        "name": "萌番组",
+        "url": "https://bangumi.moe",
+        "image": "null",
+        "description": "动画资源站"
+      },
+      {
+        "name": "VCB-Studio",
+        "url": "https://vcb-s.com",
+        "image": "/img/vcb-s.png",
+        "description": "VCB-Studio 压制组"
+      },
+      {
+        "name": "孩提的世界",
+        "url": "https://share.ghibliwiki.org/",
+        "description": "宫崎骏与久石让作品资源站"
+      },
+      {
+        "name": "trace.moe",
+        "url": "https://trace.moe",
+        "description": "以图识番"
+      },
+      {
+        "name": "AnimeTrace",
+        "url": "https://ai.animedb.cn",
+        "description": "AI 识番",
+        "image": "https://www.animetrace.com/icon.png"
+      },
+      {
+        "name": "CITY",
+        "url": "https://city-the-animation.com/",
+        "description": "动画《小城日常》官网"
+      }
+    ]
+  },
+  {
+    "name": "电子书 / 音乐",
+    "sites": [
+      {
+        "name": "轻小说文库",
+        "url": "https://www.wenku8.net/index.php"
+      },
+      {
+        "name": "轻之国度",
+        "url": "https://www.lightnovel.fun/"
+      },
+      {
+        "name": "微信读书",
+        "url": "https://weread.qq.com"
+      },
+      {
+        "name": "长门有希的书架",
+        "url": "https://haruyuki.cn/library",
+        "description": "《凉宫春日》系列",
+        "image": "https://haruyuki.cn/library/favicon.ico"
+      },
+      {
+        "name": "鸠摩",
+        "url": "https://www.jiumodiary.com"
+      },
+      {
+        "name": "Gutenberg",
+        "url": "https://www.gutenberg.org"
+      },
+      {
+        "name": "网易云",
+        "url": "https://music.163.com/st/webplayer"
+      },
+      {
+        "name": "QQ音乐",
+        "url": "https://y.qq.com"
+      },
+      {
+        "name": "酷狗",
+        "url": "https://www.kugou.com"
+      },
+      {
+        "name": "歌词滚动姬",
+        "url": "https://lrc-maker.github.io"
+      },
+      {
+        "name": "音乐解锁",
+        "url": "https://um-react.netlify.app/"
+      },
+      {
+        "name": "JE曲谱库",
+        "url": "https://github.com/zytx121/je"
+      }
+    ]
+  },
+  {
+    "name": "游戏 / 下载",
+    "sites": [
+      {
+        "name": "STEAM",
+        "url": "https://store.steampowered.com"
+      },
+      {
+        "name": "EPIC",
+        "url": "https://store.epicgames.com/zh-CN/",
+        "image": "https://static-assets-prod.epicgames.com/epic-store/static/favicon.ico"
+      },
+      {
+        "name": "东方Project",
+        "url": "https://cn.thdog.moe"
+      },
+      {
+        "name": "THBWiki",
+        "url": "https://thwiki.cc/"
+      },
+      {
+        "name": "百度网盘",
+        "url": "https://pan.baidu.com"
+      },
+      {
+        "name": "阿里云盘",
+        "url": "https://aliyundrive.com",
+        "image": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico"
+      },
+      {
+        "name": "天翼云盘",
+        "url": "https://cloud.189.cn"
+      }
+    ]
+  },
+  {
+    "name": "社交媒体",
+    "sites": [
+      {
+        "name": "微博",
+        "url": "https://weibo.com"
+      },
+      {
+        "name": "知乎",
+        "url": "https://www.zhihu.com/explore"
+      },
+      {
+        "name": "X",
+        "url": "https://twitter.com/home",
+        "image": "/img/x.ico"
+      },
+      {
+        "name": "贴吧",
+        "url": "https://tieba.baidu.com"
+      },
+      {
+        "name": "NGA",
+        "url": "https://bbs.nga.cn/"
+      },
+      {
+        "name": "Outlook",
+        "url": "https://outlook.live.com"
+      },
+      {
+        "name": "完美邮箱",
+        "url": "https://www.email.cn/"
+      },
+      {
+        "name": "QQ邮箱",
+        "url": "https://mail.qq.com"
+      }
+    ]
+  },
+  {
+    "name": "图片",
+    "sites": [
+      {
+        "name": "pixiv",
+        "url": "https://www.pixiv.net",
+        "image": "/img/pixiv.ico"
+      },
+      {
+        "name": "萌图社",
+        "url": "https://moetu.club"
+      },
+      {
+        "name": "艺视",
+        "url": "https://artsee.cc/"
+      },
+      {
+        "name": "SauceNAO",
+        "url": "https://saucenao.com"
+      },
+      {
+        "name": "路过图床",
+        "url": "https://imgchr.com/"
+      },
+      {
+        "name": "小芹图床",
+        "url": "https://imgs.977958.xyz/index.php"
+      },
+      {
+        "name": "pom",
+        "url": "https://pom-official.jp/"
+      }
+    ]
+  },
+  {
+    "name": "导航 / 工具",
+    "sites": [
+      {
+        "name": "阿虚同学",
+        "url": "https://www.axutongxue.com"
+      },
+      {
+        "name": "Castalia",
+        "url": "https://afterwork-design.github.io/castalia/",
+        "image": "https://afterwork-design.github.io/castalia/castalia-s.png"
+      },
+      {
+        "name": "MikuTools",
+        "url": "https://okmiku.com/"
+      },
+      {
+        "name": "万花筒",
+        "url": "https://0x3.com"
+      },
+      {
+        "name": "有道翻译",
+        "url": "https://fanyi.youdao.com"
+      },
+      {
+        "name": "日语词典",
+        "url": "https://aoilang.com/dict/"
+      },
+      {
+        "name": "LaTeX编辑",
+        "url": "https://www.latexlive.com"
+      },
+      {
+        "name": "手写LaTeX",
+        "url": "https://webdemo.myscript.com/views/math/index.html"
+      },
+      {
+        "name": "Earth",
+        "url": "https://earth.nullschool.net"
+      }
+    ]
+  },
+  {
+    "name": "个人网站",
+    "sites": [
+      {
+        "name": "小白-白",
+        "url": "https://moedog.org"
+      },
+      {
+        "name": "Randy",
+        "url": "https://lutaonan.com"
+      },
+      {
+        "name": "羽翼城",
+        "url": "https://www.dogfight360.com/blog/"
+      },
+      {
+        "name": "magiconch",
+        "url": "https://lab.magiconch.com/"
+      },
+      {
+        "name": "轻音部的小窝",
+        "url": "https://www.miomoe.cn/"
+      },
+      {
+        "name": "CappuccinoZ",
+        "url": "https://kitakita.top/",
+        "image": "https://kitakita.top/img/icon.png"
+      }
+    ]
+  }
+]

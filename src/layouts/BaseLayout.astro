@@ -1,9 +1,13 @@
 ---
 import "../styles/global.css";
 import Snow from "../components/Snow.astro";
-import Header from "../components/Header.astro";
+import Drawer from "../components/Drawer.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle, categories } = Astro.props;
+interface Props {
+  pageTitle: string;
+  categories?: string[];
+}
+const { pageTitle, categories = [] } = Astro.props;
 ---
 
 <html lang="zh-CN">
@@ -16,13 +20,13 @@ const { pageTitle, categories } = Astro.props;
   </head>
 
   <body>
-    <Header categories={categories} />
+    <Drawer categories={categories}>
+      <main class="main min-h-screen container mx-auto px-4 lg:px-8 py-16">
+        <slot />
+      </main>
+      <Footer />
+    </Drawer>
 
-    <main class="main min-h-screen container mx-auto px-4 lg:px-8 py-16">
-      <slot />
-    </main>
-
-    <Footer />
     <Snow />
   </body>
 </html>

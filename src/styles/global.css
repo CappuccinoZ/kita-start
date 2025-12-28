@@ -71,6 +71,11 @@
   --noise: 0;
 }
 
+:root {
+  --image-background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp);
+  --image-logo: url(/icon.png);
+}
+
 /* 平滑滚动 */
 html {
   scroll-behavior: smooth;
@@ -80,12 +85,12 @@ html {
 /* body字体与背景 */
 body {
   font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif;
-  background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp) no-repeat fixed center 33%/cover;
+  background: var(--image-background) no-repeat fixed center 33%/cover;
 }
 
 /* logo背景 */
 .logo h1 a {
-  background: url(/icon.png) no-repeat center/cover;
+  background: var(--image-logo) no-repeat center/cover;
 }
 
 /* 弹跳动画 */
@@ -105,4 +110,10 @@ body {
       transform: translateY(-3px);
     }
   }
+}
+
+/* 菜单高亮 */
+@utility menu-active {
+  --menu-active-fg: var(--color-primary-content);
+  --menu-active-bg: var(--color-primary);
 }

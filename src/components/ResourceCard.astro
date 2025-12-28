@@ -1,6 +1,18 @@
 ---
 import { Image } from "astro:assets";
+
+import type { ResourceItem } from "../scripts/resource-type";
+interface Props {
+  site: ResourceItem;
+}
 const { site } = Astro.props;
+
+let imageUrl;
+if (typeof site.image === "undefined" || site.image === "") {
+  imageUrl = "https://ico.kucat.cn/get.php?url=" + site.url;
+} else {
+  imageUrl = site.image;
+}
 ---
 
 <!-- 网站卡片 -->
@@ -8,14 +20,21 @@ const { site } = Astro.props;
   class="resource-card card h-full bg-base-100 rounded-xl shadow-md"
   href={site.url}
   target="_blank"
+  rel="noreferrer"
 >
   <div class="card-body py-4">
     <div class="card-title">
       <!-- 网站图片 -->
-      <div class="h-8 w-8 mr-3 rounded overflow-hidden">
+      <div class="flex-none h-8 w-8 mr-3 rounded overflow-hidden">
         {
-          site.image ? (
-            <Image src={site.image} alt={site.name} width="32" height="32" />
+          imageUrl !== "null" ? (
+            <Image
+              src={imageUrl}
+              alt={site.name}
+              width="32"
+              height="32"
+              loading={site.loading === "eager" ? "eager" : "lazy"}
+            />
           ) : (
             <div class="text-lg leading-8 text-center text-primary-content bg-primary">
               {site.name[0]}
@@ -25,7 +44,7 @@ const { site } = Astro.props;
       </div>
 
       <!-- 网站名称 -->
-      <h3 class="truncate">{site.name}</h3>
+      <h3 class="flex-1 truncate">{site.name}</h3>
     </div>
 
     <!-- 网站描述 -->
@@ -35,7 +54,7 @@ const { site } = Astro.props;
     {
       site.tags && (
         <div class="flex flex-wrap gap-2">
-          {site.tags.map((tag: string) => (
+          {site.tags.map((tag) => (
             <div class="badge badge-primary rounded-full">{tag}</div>
           ))}
         </div>
