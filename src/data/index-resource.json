@@ -1,6 +1,6 @@
 [
   {
-    "name": "影视 / 动漫",
+    "name": "影视 / 动画",
     "sites": [
       {
         "name": "Bilibili",
@@ -25,8 +25,14 @@
       {
         "name": "AGE 动漫",
         "url": "https://www.agedm.io",
-        "description": "在线动漫",
+        "description": "在线动画",
         "loading": "eager"
+      },
+      {
+        "name": "嗷呜动漫",
+        "url": "https://www.aowu.tv/",
+        "description": "在线动画",
+        "image": "https://p.upyun.com/demo/tmp/F1fyqlFS.webp"
       },
       {
         "name": "嘶哩嘶哩",
@@ -49,13 +55,19 @@
         "description": "ACG 资料库"
       },
       {
-        "name": "蜜柑计划",
-        "url": "https://mikanime.tv",
-        "description": "动画资源站"
-      },
-      {
         "name": "Anime Garden",
         "url": "https://animes.garden/",
+        "description": "动漫花园镜像"
+      },
+      {
+        "name": "漫猫动漫",
+        "url": "https://comicat.org/",
+        "description": "动画资源站",
+        "image": "https://comicat.org/images/favicon/comicat.ico"
+      },
+      {
+        "name": "蜜柑计划",
+        "url": "https://mikanime.tv",
         "description": "动画资源站"
       },
       {
