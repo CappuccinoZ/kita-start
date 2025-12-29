@@ -3,7 +3,6 @@ export interface ResourceItem {
   url: string,
   description?: string,
   image?: string,
-  loading?: string,
   tags?: string[]
 }
 

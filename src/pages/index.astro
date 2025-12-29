@@ -1,7 +1,8 @@
 ---
 import ResourceLayout from "../layouts/ResourceLayout.astro";
 import resourceJson from "../data/index-resource.json";
+
 const pageTitle = "Kita起始页 - 首页";
 ---
 
-<ResourceLayout pageTitle={pageTitle} resources={resourceJson} />
+<ResourceLayout pageTitle={pageTitle} resources={resourceJson} search={true} />

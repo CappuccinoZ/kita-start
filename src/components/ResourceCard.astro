@@ -17,7 +17,7 @@ if (typeof site.image === "undefined" || site.image === "") {
 
 <!-- 网站卡片 -->
 <a
-  class="resource-card card h-full bg-base-100 rounded-xl shadow-md"
+  class="resource-card card h-full bg-base-100 border border-base-300 rounded-xl shadow-md"
   href={site.url}
   target="_blank"
   rel="noreferrer"
@@ -28,13 +28,7 @@ if (typeof site.image === "undefined" || site.image === "") {
       <div class="flex-none h-8 w-8 mr-3 rounded overflow-hidden">
         {
           imageUrl !== "null" ? (
-            <Image
-              src={imageUrl}
-              alt={site.name}
-              width="32"
-              height="32"
-              loading={site.loading === "eager" ? "eager" : "lazy"}
-            />
+            <Image src={imageUrl} alt={site.name} width="32" height="32" />
           ) : (
             <div class="text-lg leading-8 text-center text-primary-content bg-primary">
               {site.name[0]}

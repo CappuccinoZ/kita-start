@@ -1,20 +1,30 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import SearchBox from "../components/SearchBox.astro";
 import ResourcePanel from "../components/ResourcePanel.astro";
+import SearchBox from "../components/SearchBox.astro";
 
 import type { Resource } from "../scripts/resource-type";
 interface Props {
   pageTitle: string;
   resources: Resource[];
+  search?: boolean;
 }
-const { pageTitle, resources } = Astro.props;
+const { pageTitle, resources, search = false } = Astro.props;
 
 const categories = resources.map((resource) => resource.name);
 ---
 
 <BaseLayout pageTitle={pageTitle} categories={categories}>
-  <SearchBox />
+  {
+    search ? (
+      <SearchBox />
+    ) : (
+      <h2 class="text-2xl mt-10 mb-4 text-center font-semibold text-secondary-content text-shadow-md">
+        {pageTitle}
+      </h2>
+    )
+  }
+
   <div class="flex">
     <div class="flex-none mr-6 pt-10 hidden lg:block">
       {

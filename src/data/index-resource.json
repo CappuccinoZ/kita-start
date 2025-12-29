@@ -1,37 +1,25 @@
 [
   {
-    "name": "影视 / 动画",
+    "name": "在线动画",
     "sites": [
       {
         "name": "Bilibili",
         "url": "https://www.bilibili.com",
-        "description": "哔哩哔哩 (゜-゜)つロ 干杯~",
-        "loading": "eager"
+        "description": "哔哩哔哩 (゜-゜)つロ 干杯~"
       },
       {
         "name": "AcFun",
         "url": "https://www.acfun.cn",
         "description": "Acfun弹幕视频网",
-        "image": "https://cdn.aixifan.com/ico/favicon.ico",
-        "loading": "eager"
-      },
-      {
-        "name": "YouTube",
-        "url": "https://www.youtube.com",
-        "description": "油管，视频分享网站",
-        "image": "/img/youtube.png",
-        "loading": "eager"
+        "image": "https://cdn.aixifan.com/ico/favicon.ico"
       },
       {
         "name": "AGE 动漫",
-        "url": "https://www.agedm.io",
-        "description": "在线动画",
-        "loading": "eager"
+        "url": "https://www.agedm.io"
       },
       {
         "name": "嗷呜动漫",
         "url": "https://www.aowu.tv/",
-        "description": "在线动画",
         "image": "https://p.upyun.com/demo/tmp/F1fyqlFS.webp"
       },
       {
@@ -43,21 +31,26 @@
         "name": "Kazumi",
         "url": "https://kazumi.app/",
         "description": "看番软件"
-      },
+      }
+    ]
+  },
+  {
+    "name": "动画资源",
+    "sites": [
       {
         "name": "长门番堂",
         "url": "https://yuc.wiki",
         "description": "查看新番表"
       },
       {
-        "name": "Bangumi 番组计划",
+        "name": "Bangumi",
         "url": "https://bangumi.tv/",
-        "description": "ACG 资料库"
+        "description": "番组计划，观看进度管理"
       },
       {
         "name": "Anime Garden",
         "url": "https://animes.garden/",
-        "description": "动漫花园镜像"
+        "description": "动漫花园镜像站"
       },
       {
         "name": "漫猫动漫",
@@ -74,7 +67,7 @@
         "name": "萌番组",
         "url": "https://bangumi.moe",
         "image": "null",
-        "description": "动画资源站"
+        "description": "国外动画资源站"
       },
       {
         "name": "VCB-Studio",
@@ -106,7 +99,7 @@
     ]
   },
   {
-    "name": "电子书 / 音乐",
+    "name": "电子书",
     "sites": [
       {
         "name": "轻小说文库",
@@ -133,7 +126,12 @@
       {
         "name": "Gutenberg",
         "url": "https://www.gutenberg.org"
-      },
+      }
+    ]
+  },
+  {
+    "name": "音乐",
+    "sites": [
       {
         "name": "网易云",
         "url": "https://music.163.com/st/webplayer"
@@ -145,6 +143,11 @@
       {
         "name": "酷狗",
         "url": "https://www.kugou.com"
+      },
+      {
+        "name": "月盒 MoonBox",
+        "url": "https://two-moons.site/",
+        "description": "音乐学习"
       },
       {
         "name": "歌词滚动姬",
@@ -161,7 +164,7 @@
     ]
   },
   {
-    "name": "游戏 / 下载",
+    "name": "游戏",
     "sites": [
       {
         "name": "STEAM",
@@ -179,24 +182,11 @@
       {
         "name": "THBWiki",
         "url": "https://thwiki.cc/"
-      },
-      {
-        "name": "百度网盘",
-        "url": "https://pan.baidu.com"
-      },
-      {
-        "name": "阿里云盘",
-        "url": "https://aliyundrive.com",
-        "image": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico"
-      },
-      {
-        "name": "天翼云盘",
-        "url": "https://cloud.189.cn"
       }
     ]
   },
   {
-    "name": "社交媒体",
+    "name": "社交聊天",
     "sites": [
       {
         "name": "微博",
@@ -239,19 +229,23 @@
       {
         "name": "pixiv",
         "url": "https://www.pixiv.net",
-        "image": "/img/pixiv.ico"
+        "image": "/img/pixiv.ico",
+        "description": "国外插画艺术社交平台"
       },
       {
         "name": "萌图社",
-        "url": "https://moetu.club"
+        "url": "https://moetu.club",
+        "description": "二次元图片分享社区"
       },
       {
         "name": "艺视",
-        "url": "https://artsee.cc/"
+        "url": "https://artsee.cc/",
+        "description": "设定集资料库"
       },
       {
         "name": "SauceNAO",
-        "url": "https://saucenao.com"
+        "url": "https://saucenao.com",
+        "description": "以图搜图"
       },
       {
         "name": "路过图床",
@@ -263,12 +257,13 @@
       },
       {
         "name": "pom",
-        "url": "https://pom-official.jp/"
+        "url": "https://pom-official.jp/",
+        "description": "画师pom"
       }
     ]
   },
   {
-    "name": "导航 / 工具",
+    "name": "实用工具",
     "sites": [
       {
         "name": "阿虚同学",
@@ -294,6 +289,19 @@
       {
         "name": "日语词典",
         "url": "https://aoilang.com/dict/"
+      },
+      {
+        "name": "百度网盘",
+        "url": "https://pan.baidu.com"
+      },
+      {
+        "name": "阿里云盘",
+        "url": "https://aliyundrive.com",
+        "image": "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico"
+      },
+      {
+        "name": "天翼云盘",
+        "url": "https://cloud.189.cn"
       },
       {
         "name": "LaTeX编辑",
@@ -330,12 +338,14 @@
       },
       {
         "name": "轻音部的小窝",
-        "url": "https://www.miomoe.cn/"
+        "url": "https://www.miomoe.cn/",
+        "description": "网站倒闭中"
       },
       {
         "name": "CappuccinoZ",
         "url": "https://kitakita.top/",
-        "image": "https://kitakita.top/img/icon.png"
+        "image": "https://kitakita.top/img/icon.png",
+        "description": "我的博客"
       }
     ]
   }
