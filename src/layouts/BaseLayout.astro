@@ -8,6 +8,18 @@ interface Props {
   categories?: string[];
 }
 const { pageTitle, categories = [] } = Astro.props;
+const keywords: string[] = [
+  "site navigation",
+  "anime",
+  "bangumi",
+  "Kita起始页",
+  "网址导航",
+  "在线动漫",
+  "动画",
+  "追番",
+  "编程",
+];
+const desctiption = "专注于动漫领域网站与资源，让网上冲浪体验更加舒心";
 ---
 
 <html lang="zh-CN">
@@ -16,6 +28,8 @@ const { pageTitle, categories = [] } = Astro.props;
     <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="keywords" content={keywords.join(",")} />
+    <meta name="description" content={desctiption} />
     <title>{pageTitle}</title>
   </head>
 

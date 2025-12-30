@@ -108,6 +108,10 @@
     "name": "开发框架与库",
     "sites": [
       {
+        "name": "astro",
+        "url": "https://astro.build/"
+      },
+      {
         "name": "Vue.js",
         "url": "https://cn.vuejs.org/"
       },
