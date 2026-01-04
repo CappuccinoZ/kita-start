@@ -2,5 +2,37 @@
 import "../styles/snow.css";
 ---
 
-<div class="snow-area"></div>
-<script src="../scripts/snow.js"></script>
+<div class="snow-area hidden md:block"></div>
+
+<script>
+  // 获取随机数
+  function getRandom(min: number, max: number) {
+    return min + Math.random() * (max - min);
+  }
+
+  // 创建雪花元素
+  function createSnowflake(animationDelay: number) {
+    const snowflake = document.createElement("div");
+    snowflake.className = "snowflake";
+    snowflake.textContent = "❄";
+
+    // 设置雪花大小、初始位置、动画延迟
+    const size = getRandom(10, 24);
+    const initialX = getRandom(-0.618 * window.innerHeight, window.innerWidth);
+    snowflake.style.fontSize = `${size}px`;
+    snowflake.style.left = `${initialX}px`;
+    snowflake.style.animationDelay = `${animationDelay}s`;
+
+    // 添加到snow-area容器中
+    const snowArea = document.querySelector(".snow-area") as HTMLElement;
+    snowArea.appendChild(snowflake);
+  }
+
+  // 雪花效果
+  const interval = 0.333;
+  const duration = 10;
+  const n = Math.floor(duration / interval);
+  for (let i = 0; i < n; i++) {
+    createSnowflake(interval * i);
+  }
+</script>

@@ -73,11 +73,11 @@
 
   // 设置搜索引擎
   function setSearchEngine(action: string, queryParam: string) {
-    const searchForm = document.getElementById(
-      "search-form",
+    const searchForm = document.querySelector(
+      "#search-form",
     ) as HTMLFormElement;
-    const searchContentInput = document.getElementById(
-      "search-content",
+    const searchContentInput = document.querySelector(
+      "#search-content",
     ) as HTMLInputElement;
 
     searchForm.action = action;
@@ -89,8 +89,8 @@
   setSearchEngine(defaultEngine.action, defaultEngine.queryParam);
 
   // 切换搜索引擎
-  const searchEngineSelect = document.getElementById(
-    "search-engine",
+  const searchEngineSelect = document.querySelector(
+    "#search-engine",
   ) as HTMLSelectElement;
   searchEngineSelect.addEventListener("change", (e) => {
     const engine =

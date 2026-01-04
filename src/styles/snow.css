@@ -1,13 +1,13 @@
 .snowflake {
-    position: fixed;
-    top: -10px;
-    color: #E0E0E0;
-    animation: fall 10s linear infinite;
-    user-select: none;
+  position: fixed;
+  top: -10px;
+  color: #E0E0E0;
+  animation: fall 10s linear infinite;
+  user-select: none;
 }
 
 @keyframes fall {
-    to {
-        transform: translate(61.8vh, 100vh);
-    }
+  to {
+    transform: translate(61.8vh, 100vh);
+  }
 }

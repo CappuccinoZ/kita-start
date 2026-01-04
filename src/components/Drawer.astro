@@ -135,8 +135,10 @@ const { categories } = Astro.props;
 </div>
 
 <script>
-  const links = document.querySelectorAll(".drawer-side a");
-  const drawerToggle = document.getElementById("drawer") as HTMLInputElement;
+  const links = document.querySelectorAll(
+    ".drawer-side a",
+  ) as NodeListOf<HTMLAnchorElement>;
+  const drawerToggle = document.querySelector("#drawer") as HTMLInputElement;
 
   links.forEach((link) => {
     link.addEventListener("click", function () {

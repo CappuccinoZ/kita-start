@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import ResourcePanel from "../components/ResourcePanel.astro";
 import SearchBox from "../components/SearchBox.astro";
+import Snow from "../components/Snow.astro";
 
 import type { Resource } from "../scripts/resource-type";
 interface Props {
@@ -47,10 +48,14 @@ const categories = resources.map((resource) => resource.name);
       {resources.map((resource) => <ResourcePanel resource={resource} />)}
     </div>
   </div>
+
+  <Snow />
 </BaseLayout>
 
 <script>
-  const menuItems = document.querySelectorAll(".menu-item");
+  const menuItems = document.querySelectorAll(
+    ".menu-item",
+  ) as NodeListOf<HTMLAnchorElement>;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -60,7 +65,7 @@ const categories = resources.map((resource) => resource.name);
       menuItems.forEach((item) => {
         item.classList.toggle(
           "menu-active",
-          item.getAttribute("href") === `#${activeEntry.target.id}`,
+          item.href === `#${activeEntry.target.id}`,
         );
       });
     },
