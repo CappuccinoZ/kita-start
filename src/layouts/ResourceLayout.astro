@@ -2,7 +2,6 @@
 import BaseLayout from "./BaseLayout.astro";
 import ResourcePanel from "../components/ResourcePanel.astro";
 import SearchBox from "../components/SearchBox.astro";
-import Snow from "../components/Snow.astro";
 
 import type { Resource } from "../scripts/resource-type";
 interface Props {
@@ -48,8 +47,6 @@ const categories = resources.map((resource) => resource.name);
       {resources.map((resource) => <ResourcePanel resource={resource} />)}
     </div>
   </div>
-
-  <Snow />
 </BaseLayout>
 
 <script>
