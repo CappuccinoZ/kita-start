@@ -62,7 +62,7 @@ const categories = resources.map((resource) => resource.name);
       menuItems.forEach((item) => {
         item.classList.toggle(
           "menu-active",
-          item.href === `#${activeEntry.target.id}`,
+          item.textContent.trim() === activeEntry.target.id,
         );
       });
     },
