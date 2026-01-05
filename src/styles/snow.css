@@ -2,7 +2,7 @@
   position: fixed;
   top: -10px;
   color: #E0E0E0;
-  animation: fall 10s linear infinite;
+  animation: fall 15s linear infinite;
   user-select: none;
 }
 

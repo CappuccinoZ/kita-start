@@ -2,7 +2,7 @@
 import "../styles/snow.css";
 ---
 
-<div class="snow-area hidden md:block"></div>
+<div class="snow-area hidden sm:block"></div>
 
 <script>
   // 获取随机数
@@ -28,10 +28,10 @@ import "../styles/snow.css";
     snowArea.appendChild(snowflake);
   }
 
-  // 雪花效果
-  const interval = 0.333;
-  const duration = 10;
-  const n = Math.floor(duration / interval);
+  // 雪花数量与动画持续时间
+  const n = 25;
+  const duration = 15;
+  const interval = duration / n;
   for (let i = 0; i < n; i++) {
     createSnowflake(interval * i);
   }
