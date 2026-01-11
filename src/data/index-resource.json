@@ -42,14 +42,14 @@
     "name": "动画资源",
     "sites": [
       {
-        "name": "长门番堂",
-        "url": "https://yuc.wiki",
-        "description": "查看新番表"
-      },
-      {
         "name": "Bangumi",
         "url": "https://bangumi.tv/",
         "description": "番组计划，观看进度管理"
+      },
+      {
+        "name": "长门番堂",
+        "url": "https://yuc.wiki",
+        "description": "查看新番表"
       },
       {
         "name": "Anime Garden",
@@ -66,12 +66,6 @@
         "name": "蜜柑计划",
         "url": "https://mikanime.tv",
         "description": "动画资源站"
-      },
-      {
-        "name": "萌番组",
-        "url": "https://bangumi.moe",
-        "image": "null",
-        "description": "国外动画资源站"
       },
       {
         "name": "VCB-Studio",
@@ -202,7 +196,7 @@
       },
       {
         "name": "X",
-        "url": "https://x.com/home",
+        "url": "https://x.com",
         "image": "/img/x.ico"
       },
       {
