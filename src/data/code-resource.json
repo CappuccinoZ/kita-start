@@ -49,6 +49,10 @@
         "url": "https://developer.mozilla.org/zh-CN/"
       },
       {
+        "name": "Modern CSS",
+        "url": "https://modern-css.com/"
+      },
+      {
         "name": "代码随想录",
         "url": "https://www.programmercarl.com/"
       },
@@ -130,6 +134,10 @@
       {
         "name": "MDUI",
         "url": "https://www.mdui.org"
+      },
+      {
+        "name": "Hono",
+        "url": "https://hono.dev/"
       },
       {
         "name": "NumPy",

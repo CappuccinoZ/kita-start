@@ -200,6 +200,10 @@
         "image": "/img/x.ico"
       },
       {
+        "name": "天使动漫",
+        "url": "https://tsdm39.com/forum.php"
+      },
+      {
         "name": "贴吧",
         "url": "https://tieba.baidu.com"
       },
@@ -229,11 +233,6 @@
         "url": "https://www.pixiv.net",
         "image": "/img/pixiv.ico",
         "description": "国外插画艺术社交平台"
-      },
-      {
-        "name": "萌图社",
-        "url": "https://moetu.club",
-        "description": "二次元图片分享社区"
       },
       {
         "name": "艺视",
@@ -333,11 +332,6 @@
       {
         "name": "magiconch",
         "url": "https://lab.magiconch.com/"
-      },
-      {
-        "name": "轻音部的小窝",
-        "url": "https://www.miomoe.cn/",
-        "description": "网站倒闭中"
       },
       {
         "name": "CappuccinoZ",
