@@ -23,7 +23,7 @@
       {
         "name": "Fish Audio",
         "url": "https://fish.audio",
-        "image": "/img/fish.audio.ico"
+        "image": "/images/fish.audio.ico"
       },
       {
         "name": "AI Hobbyist TTS",
@@ -42,7 +42,7 @@
       {
         "name": "LINUX DO",
         "url": "https://linux.do/",
-        "image": "/img/linux.do.png"
+        "image": "/images/linux.do.png"
       },
       {
         "name": "MDN",

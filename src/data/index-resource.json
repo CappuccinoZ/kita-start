@@ -70,7 +70,7 @@
       {
         "name": "VCB-Studio",
         "url": "https://vcb-s.com",
-        "image": "/img/vcb-s.png",
+        "image": "/images/vcb-s.png",
         "description": "VCB-Studio 压制组"
       },
       {
@@ -197,7 +197,7 @@
       {
         "name": "X",
         "url": "https://x.com",
-        "image": "/img/x.ico"
+        "image": "/images/x.ico"
       },
       {
         "name": "天使动漫",
@@ -231,7 +231,7 @@
       {
         "name": "pixiv",
         "url": "https://www.pixiv.net",
-        "image": "/img/pixiv.ico",
+        "image": "/images/pixiv.ico",
         "description": "国外插画艺术社交平台"
       },
       {
