@@ -1,7 +1,7 @@
 [
   {
     "name": "AI工具",
-    "sites": [
+    "site": [
       {
         "name": "DeepSeek",
         "url": "https://chat.deepseek.com/"
@@ -34,7 +34,7 @@
   },
   {
     "name": "开发者资源",
-    "sites": [
+    "site": [
       {
         "name": "Github",
         "url": "https://github.com/"
@@ -80,7 +80,7 @@
   },
   {
     "name": "云服务",
-    "sites": [
+    "site": [
       {
         "name": "Cloudflare",
         "url": "https://dash.cloudflare.com/login?lang=zh-hans-cn"
@@ -110,7 +110,7 @@
   },
   {
     "name": "开发框架与库",
-    "sites": [
+    "site": [
       {
         "name": "astro",
         "url": "https://astro.build/"

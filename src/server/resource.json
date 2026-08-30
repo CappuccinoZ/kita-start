@@ -1,7 +1,7 @@
 [
   {
     "name": "在线动画",
-    "sites": [
+    "site": [
       {
         "name": "Bilibili",
         "url": "https://www.bilibili.com",
@@ -40,7 +40,7 @@
   },
   {
     "name": "动画资源",
-    "sites": [
+    "site": [
       {
         "name": "Bangumi",
         "url": "https://bangumi.tv/",
@@ -98,7 +98,7 @@
   },
   {
     "name": "电子书",
-    "sites": [
+    "site": [
       {
         "name": "轻小说文库",
         "url": "https://www.wenku8.net/index.php"
@@ -129,7 +129,7 @@
   },
   {
     "name": "音乐",
-    "sites": [
+    "site": [
       {
         "name": "网易云",
         "url": "https://music.163.com/st/webplayer"
@@ -163,7 +163,7 @@
   },
   {
     "name": "游戏",
-    "sites": [
+    "site": [
       {
         "name": "STEAM",
         "url": "https://store.steampowered.com"
@@ -185,7 +185,7 @@
   },
   {
     "name": "社交聊天",
-    "sites": [
+    "site": [
       {
         "name": "微博",
         "url": "https://weibo.com"
@@ -227,7 +227,7 @@
   },
   {
     "name": "图片",
-    "sites": [
+    "site": [
       {
         "name": "pixiv",
         "url": "https://www.pixiv.net",
@@ -261,7 +261,7 @@
   },
   {
     "name": "实用工具",
-    "sites": [
+    "site": [
       {
         "name": "阿虚同学",
         "url": "https://www.axutongxue.com"
@@ -316,7 +316,7 @@
   },
   {
     "name": "个人网站",
-    "sites": [
+    "site": [
       {
         "name": "小白-白",
         "url": "https://moedog.org"

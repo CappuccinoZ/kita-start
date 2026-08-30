@@ -1,11 +1,12 @@
 ---
 import ResourceCard from "./ResourceCard.astro";
 
-import type { Resource } from "../scripts/resource-type";
+import type { Resource } from "../server/types";
 interface Props {
   resource: Resource;
 }
 const { resource } = Astro.props;
+const { name, site } = resource;
 ---
 
 <!-- 网站分类 -->
@@ -13,9 +14,9 @@ const { resource } = Astro.props;
   <!-- 分类名称 -->
   <h2
     class="text-xl mb-3 text-secondary-content font-semibold text-shadow-sm"
-    id={resource.name}
+    id={name}
   >
-    {resource.name}
+    {name}
   </h2>
 
   <!-- 网站卡片列表 -->
@@ -23,9 +24,9 @@ const { resource } = Astro.props;
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3"
   >
     {
-      resource.sites.map((site) => (
+      site.map((item) => (
         <li class="animate-jump">
-          <ResourceCard site={site} />
+          <ResourceCard site={item} />
         </li>
       ))
     }
