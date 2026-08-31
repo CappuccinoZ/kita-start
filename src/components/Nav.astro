@@ -8,7 +8,7 @@ const { resource } = Astro.props;
 
 <div class="h-11.75">
   <div class="top-nav">
-    <ul class="flex items-center gap-7 wp h-full">
+    <ul class="flex items-center gap-7 wp h-full overflow-x-auto overflow-y-hidden">
       {
         resource.map((item) => (
           <li>
@@ -29,6 +29,10 @@ const { resource } = Astro.props;
       background-color 0.3s ease,
       box-shadow 0.3s ease,
       border-color 0.3s ease;
+  }
+
+  .top-nav li {
+    @apply shrink-0;
   }
 
   .top-nav a {
