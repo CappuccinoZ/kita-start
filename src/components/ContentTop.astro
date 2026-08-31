@@ -1,0 +1,14 @@
+---
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
+
+import type { Resource } from "../server/types";
+interface Props {
+  resource: Resource[];
+}
+const { resource } = Astro.props;
+---
+
+<Header />
+<div class="banner h-[80vh]"></div>
+<Nav resource={resource} />

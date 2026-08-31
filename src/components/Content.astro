@@ -1,0 +1,17 @@
+---
+import Footer from "./Footer.astro";
+
+import ResourcePanel from "../components/ResourcePanel.astro";
+import type { Resource } from "../server/types";
+interface Props {
+  resource: Resource[];
+}
+const { resource } = Astro.props;
+---
+
+<div class="content bg-[#fffcf2]">
+  <div class="min-h-screen wp px-5 pt-5 pb-20 space-y-7.5">
+    {resource.map((item) => <ResourcePanel resource={item} />)}
+  </div>
+  <Footer />
+</div>

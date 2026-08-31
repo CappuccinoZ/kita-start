@@ -9,23 +9,20 @@ const { resource } = Astro.props;
 const { name, site } = resource;
 ---
 
-<!-- 网站分类 -->
-<div class="resource-panel mb-10">
-  <!-- 分类名称 -->
+<div class="resource-panel">
   <h2
-    class="text-xl mb-3 text-secondary-content font-semibold text-shadow-sm"
+    class="font-semibold mb-3.75 text-shadow-sm"
     id={name}
   >
     {name}
   </h2>
 
-  <!-- 网站卡片列表 -->
   <ul
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3.75"
   >
     {
       site.map((item) => (
-        <li class="animate-jump">
+        <li>
           <ResourceCard site={item} />
         </li>
       ))

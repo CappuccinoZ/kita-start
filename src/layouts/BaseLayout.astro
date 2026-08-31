@@ -1,12 +1,10 @@
 ---
 import "../styles/global.css";
-import Drawer from "../components/Drawer.astro";
-import Footer from "../components/Footer.astro";
+import "../styles/main.css";
 interface Props {
   pageTitle: string;
-  categories?: string[];
 }
-const { pageTitle, categories = [] } = Astro.props;
+const { pageTitle } = Astro.props;
 const keywords: string[] = [
   "site navigation",
   "anime",
@@ -32,12 +30,9 @@ const desctiption = "专注于动漫领域网站与资源，让网上冲浪体�
     <title>{pageTitle}</title>
   </head>
 
-  <body>
-    <Drawer categories={categories}>
-      <main class="main min-h-screen container mx-auto px-4 lg:px-8 pt-16">
-        <slot />
-      </main>
-      <Footer />
-    </Drawer>
+  <body class="min-h-full w-full">
+    <div class="relative min-h-svh w-full">
+      <slot />
+    </div>
   </body>
 </html>

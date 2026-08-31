@@ -9,7 +9,7 @@
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(98% 0 0);
   --color-base-300: oklch(95% 0 0);
-  --color-base-content: oklch(21% 0.006 285.885);
+  --color-base-content: #333;
   --color-primary: #D4594E;
   --color-primary-content: oklch(100% 0 0);
   --color-secondary: oklch(51% 0.262 276.966);
@@ -76,16 +76,20 @@
   --image-logo: url(/icon.png);
 }
 
+.banner{
+  background: url(https://s41.ax1x.com/2025/12/12/pZM9B0x.webp) no-repeat center 33%/cover;
+}
+
 /* 平滑滚动 */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 64px;
+  scroll-padding-top: 120px;
 }
 
 /* body字体与背景 */
 body {
   font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif;
-  background: var(--image-background) no-repeat fixed center 33%/cover;
+  /* background: var(--image-background) no-repeat fixed center 33%/cover; */
 }
 
 /* logo背景 */

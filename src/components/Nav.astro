@@ -1,0 +1,78 @@
+---
+import type { Resource } from "../server/types";
+interface Props {
+  resource: Resource[];
+}
+const { resource } = Astro.props;
+---
+
+<div class="h-11.75">
+  <div class="top-nav">
+    <ul class="flex items-center gap-7 wp h-full">
+      {
+        resource.map((item) => (
+          <li>
+            <a href={"#" + item.name}>{item.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  @import "tailwindcss";
+
+  .top-nav {
+    @apply h-11.5 w-full bg-white border-b border-[#e5e5e5] z-50;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .top-nav a {
+    @apply block px-1.5 text-sm leading-11.5;
+  }
+
+  .nav-fixed {
+    @apply fixed top-15 bg-[#fffcf2] border-transparent;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script>
+  function setupNav() {
+    const nav = document.querySelector(".top-nav");
+    if (!nav) return;
+
+    let fixed = false;
+
+    const changeNavStatus = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const threshold = window.innerHeight * 0.8 - 60;
+
+      if (scrollTop >= threshold && !fixed) {
+        nav.classList.add("nav-fixed");
+        fixed = true;
+      }
+      if (scrollTop < threshold && fixed) {
+        nav.classList.remove("nav-fixed");
+        fixed = false;
+      }
+    };
+
+    window.addEventListener("scroll", changeNavStatus, { passive: true });
+
+    document.addEventListener(
+      "astro:before-swap",
+      () => {
+        window.removeEventListener("scroll", changeNavStatus);
+      },
+      { once: true },
+    );
+  }
+
+  setupNav();
+  document.addEventListener("astro:page-load", setupNav);
+</script>

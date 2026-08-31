@@ -1,0 +1,97 @@
+<div class="header fixed h-15 w-full bg-white z-100">
+  <div class="relative flex items-center justify-between wp">
+    <div class="flex items-center">
+      <h1 class="font-semibold text-2xl">
+        <a href="/">Kita Start</a>
+      </h1>
+      <div class="flex gap-5 text-sm leading-15 ml-7.5">
+        <a href="/">首页</a>
+        <a href="/code">编程</a>
+      </div>
+    </div>
+    <div class="absolute left-[50%] translate-x-[-50%]">
+      <form id="search-form">
+        <label class="input h-9 w-75 rounded-full">
+          <input id="search" type="search" placeholder="Search..." />
+          <button class="h-full w-5 text-[#c0c4cc] cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-full w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search-icon lucide-search"
+              ><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"
+              ></circle></svg
+            >
+          </button>
+        </label>
+      </form>
+    </div>
+    <label class="swap swap-rotate">
+      <!-- this hidden checkbox controls the state -->
+      <input type="checkbox" class="theme-controller" value="dark" />
+
+      <!-- sun icon -->
+      <svg
+        class="swap-off size-5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M11 3V2q0-.425.288-.712T12 1t.713.288T13 2v1q0 .425-.288.713T12 4t-.712-.288T11 3m0 19v-1q0-.425.288-.712T12 20t.713.288T13 21v1q0 .425-.288.713T12 23t-.712-.288T11 22m11-9h-1q-.425 0-.712-.288T20 12t.288-.712T21 11h1q.425 0 .713.288T23 12t-.288.713T22 13M3 13H2q-.425 0-.712-.288T1 12t.288-.712T2 11h1q.425 0 .713.288T4 12t-.288.713T3 13m16.75-7.325l-.35.35q-.275.275-.687.275T18 6q-.275-.275-.288-.687t.263-.713l.375-.375q.275-.3.7-.3t.725.3t.288.725t-.313.725M6.025 19.4l-.375.375q-.275.3-.7.3t-.725-.3t-.288-.725t.313-.725l.35-.35q.275-.275.688-.275T6 18q.275.275.288.688t-.263.712m12.3.35l-.35-.35q-.275-.275-.275-.687T18 18q.275-.275.688-.287t.712.262l.375.375q.3.275.3.7t-.3.725t-.725.288t-.725-.313M4.6 6.025l-.375-.375q-.3-.275-.3-.7t.3-.725t.725-.288t.725.313l.35.35q.275.275.275.688T6 6q-.275.275-.687.288T4.6 6.025M7.75 16.25Q6 14.5 6 12t1.75-4.25T12 6t4.25 1.75T18 12t-1.75 4.25T12 18t-4.25-1.75m7.088-1.412Q16 13.675 16 12t-1.162-2.838T12 8T9.162 9.163T8 12t1.163 2.838T12 16t2.838-1.162M12 12"
+        ></path></svg
+      >
+
+      <!-- moon icon -->
+      <svg
+        class="swap-on size-5"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75"
+        ></path></svg
+      >
+    </label>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector("#search-form") as HTMLFormElement;
+  const input = document.querySelector("#search") as HTMLInputElement;
+  const panels = Array.from(document.querySelectorAll<HTMLElement>(".resource-panel"));
+
+  function filter() {
+    const keyword = input.value.trim().toLowerCase();
+
+    panels.forEach((panel) => {
+      const cards = Array.from(panel.querySelectorAll<HTMLElement>(".resource-card"));
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const name = card.dataset.name ?? "";
+        const desc = card.dataset.desc ?? "";
+        const matched = !keyword || name.includes(keyword) || desc.includes(keyword);
+        card.parentElement!.style.display = matched ? "" : "none";
+        if (matched) visibleCount++;
+      });
+
+      panel.style.display = visibleCount > 0 ? "" : "none";
+    });
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    filter();
+  });
+
+  input.addEventListener("input", () => {
+    if (input.value.trim() === "") {
+      filter();
+    }
+  });
+</script>

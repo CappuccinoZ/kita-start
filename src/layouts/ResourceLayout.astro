@@ -1,70 +1,16 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import ResourcePanel from "../components/ResourcePanel.astro";
-import SearchBox from "../components/SearchBox.astro";
-
+import ContentTop from "../components/ContentTop.astro";
+import Content from "../components/Content.astro";
 import type { Resource } from "../server/types";
 interface Props {
   pageTitle: string;
   resource: Resource[];
 }
 const { pageTitle, resource } = Astro.props;
-
-const categories = resource.map((resource) => resource.name);
 ---
 
-<BaseLayout pageTitle={pageTitle} categories={categories}>
-  <SearchBox />
-  
-  <div class="flex">
-    <div class="flex-none mr-6 pt-10 hidden lg:block">
-      {
-        categories && categories.length > 0 && (
-          <ul class="menu sticky top-26 bg-base-100 rounded-box w-50">
-            <li class="menu-title">分类</li>
-            {categories.map((category) => (
-              <li>
-                <a
-                  class="menu-item"
-                  href={"#" + category}
-                  data-category={category}
-                >
-                  {category}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )
-      }
-    </div>
-
-    <div class="flex-1">
-      {resource.map((item) => <ResourcePanel resource={item} />)}
-    </div>
-  </div>
+<BaseLayout pageTitle={pageTitle}>
+  <ContentTop resource={resource} />
+  <Content resource={resource} />
 </BaseLayout>
-
-<script>
-  const menuItems = document.querySelectorAll(
-    ".menu-item",
-  ) as NodeListOf<HTMLAnchorElement>;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const activeEntry = entries.find((e) => e.isIntersecting);
-      if (!activeEntry) return;
-
-      menuItems.forEach((item) => {
-        item.classList.toggle(
-          "menu-active",
-          item.dataset.category === activeEntry.target.id,
-        );
-      });
-    },
-    { rootMargin: "0px 0px -70% 0px" },
-  );
-
-  document
-    .querySelectorAll(".resource-panel h2[id]")
-    .forEach((h2) => observer.observe(h2));
-</script>
