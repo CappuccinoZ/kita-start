@@ -3,17 +3,22 @@
     "name": "AI工具",
     "site": [
       {
+        "name": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "image": "/images/chatgpt.ico"
+      },
+      {
+        "name": "Gemini",
+        "url": "https://gemini.google.com/app",
+        "image": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+      },
+      {
         "name": "DeepSeek",
         "url": "https://chat.deepseek.com/"
       },
       {
         "name": "豆包",
         "url": "https://www.doubao.com/chat/"
-      },
-      {
-        "name": "Gemini",
-        "url": "https://gemini.google.com/app",
-        "image": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
       },
       {
         "name": "AI工具集",
@@ -33,7 +38,7 @@
     ]
   },
   {
-    "name": "开发者资源",
+    "name": "学习交流",
     "site": [
       {
         "name": "Github",
@@ -47,6 +52,10 @@
       {
         "name": "MDN",
         "url": "https://developer.mozilla.org/zh-CN/"
+      },
+      {
+        "name": "Web笔记",
+        "url": "https://note.kitakita.top/"
       },
       {
         "name": "Modern CSS",
@@ -63,23 +72,72 @@
       {
         "name": "Y分钟速成X",
         "url": "https://learnxinyminutes.com/"
-      },
-      {
-        "name": "tuna",
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/"
-      },
-      {
-        "name": "Bing Webmaster Tools",
-        "url": "https://www.bing.com/webmasters/"
-      },
-      {
-        "name": "QuestMobile报告",
-        "url": "https://www.questmobile.com.cn/research/reports"
       }
     ]
   },
   {
-    "name": "云服务",
+    "name": "文档",
+    "site": [
+      {
+        "name": "React",
+        "url": "https://zh-hans.react.dev/learn"
+      },
+      {
+        "name": "Next",
+        "url": "https://nextjs.org/docs"
+      },
+      {
+        "name": "Vue",
+        "url": "https://cn.vuejs.org/"
+      },
+      {
+        "name": "Nuxt",
+        "url": "https://nuxt.com/"
+      },
+      {
+        "name": "Astro",
+        "url": "https://astro.build/"
+      },
+        {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com/"
+      },
+      {
+        "name": "shadcn/ui",
+        "url": "https://ui.shadcn.com/docs/components"
+      },
+      {
+        "name": "daisyUI",
+        "url": "https://daisyui.com/?lang=zh_hans"
+      },
+      {
+        "name": "MDUI",
+        "url": "https://www.mdui.org"
+      },
+      {
+        "name": "Bun",
+        "url": "https://bun.com/docs"
+      },
+      {
+        "name": "drizzle",
+        "url": "https://orm.drizzle.team/docs/overview"
+      },
+      {
+        "name": "Hono",
+        "url": "https://hono.dev/"
+      },
+      {
+        "name": "NumPy",
+        "url": "https://numpy.org/"
+      },
+      {
+        "name": "pandas",
+        "url": "https://pandas.pydata.org/"
+      }
+    ]
+  },
+  {
+    "name": "开发平台",
     "site": [
       {
         "name": "Cloudflare",
@@ -103,53 +161,16 @@
         "image": "https://www.namesilo.com/favicon.ico"
       },
       {
+        "name": "Bing Webmaster Tools",
+        "url": "https://www.bing.com/webmasters/"
+      },
+      {
         "name": "智算云扉",
         "url": "https://waas.aigate.cc"
-      }
-    ]
-  },
-  {
-    "name": "开发框架与库",
-    "site": [
-      {
-        "name": "astro",
-        "url": "https://astro.build/"
       },
       {
-        "name": "Vue.js",
-        "url": "https://cn.vuejs.org/"
-      },
-      {
-        "name": "Nuxt",
-        "url": "https://nuxt.com/"
-      },
-      {
-        "name": "Tailwind CSS",
-        "url": "https://tailwindcss.com/"
-      },
-      {
-        "name": "daisyUI",
-        "url": "https://daisyui.com/?lang=zh_hans"
-      },
-      {
-        "name": "MDUI",
-        "url": "https://www.mdui.org"
-      },
-      {
-        "name": "Hono",
-        "url": "https://hono.dev/"
-      },
-      {
-        "name": "NumPy",
-        "url": "https://numpy.org/"
-      },
-      {
-        "name": "pandas",
-        "url": "https://pandas.pydata.org/"
-      },
-      {
-        "name": "ECharts",
-        "url": "https://echarts.apache.org/zh/index.html"
+        "name": "tuna",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/"
       }
     ]
   }

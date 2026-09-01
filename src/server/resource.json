@@ -1,6 +1,6 @@
 [
   {
-    "name": "在线动画",
+    "name": "动画",
     "site": [
       {
         "name": "Bilibili",
@@ -10,7 +10,6 @@
       {
         "name": "AcFun",
         "url": "https://www.acfun.cn",
-        "description": "Acfun弹幕视频网",
         "image": "https://cdn.aixifan.com/ico/favicon.ico"
       },
       {
@@ -18,9 +17,8 @@
         "url": "https://www.agedm.io"
       },
       {
-        "name": "嗷呜动漫",
-        "url": "https://www.aowu.tv/",
-        "image": "https://p.upyun.com/demo/tmp/F1fyqlFS.webp"
+        "name": "月之祠",
+        "url": "https://www.moonci.com/"
       },
       {
         "name": "Animoe动漫",
@@ -29,27 +27,20 @@
       {
         "name": "嘶哩嘶哩",
         "url": "https://www.silisilifun.com",
-        "description": "「silisilinb」"
+        "description": "「silisilinb」",
+        "image": "https://www.silisilifun.com/tgy/img/logo.png"
       },
       {
         "name": "Kazumi",
-        "url": "https://kazumi.app/",
-        "description": "看番软件"
-      }
-    ]
-  },
-  {
-    "name": "动画资源",
-    "site": [
+        "url": "https://kazumi.app/"
+      },
       {
         "name": "Bangumi",
-        "url": "https://bangumi.tv/",
-        "description": "番组计划，观看进度管理"
+        "url": "https://bangumi.tv/"
       },
       {
         "name": "长门番堂",
-        "url": "https://yuc.wiki",
-        "description": "查看新番表"
+        "url": "https://yuc.wiki"
       },
       {
         "name": "Anime Garden",
@@ -59,19 +50,16 @@
       {
         "name": "漫猫动漫",
         "url": "https://comicat.org/",
-        "description": "动画资源站",
         "image": "https://comicat.org/images/favicon/comicat.ico"
       },
       {
         "name": "蜜柑计划",
-        "url": "https://mikanime.tv",
-        "description": "动画资源站"
+        "url": "https://mikanime.tv"
       },
       {
         "name": "VCB-Studio",
         "url": "https://vcb-s.com",
-        "image": "/images/vcb-s.png",
-        "description": "VCB-Studio 压制组"
+        "image": "/images/vcb-s.png"
       },
       {
         "name": "孩提的世界",
@@ -80,24 +68,17 @@
       },
       {
         "name": "trace.moe",
-        "url": "https://trace.moe",
-        "description": "以图识番"
+        "url": "https://trace.moe"
       },
       {
         "name": "AnimeTrace",
         "url": "https://ai.animedb.cn",
-        "description": "AI 识番",
         "image": "https://www.animetrace.com/icon.png"
-      },
-      {
-        "name": "CITY",
-        "url": "https://city-the-animation.com/",
-        "description": "动画《小城日常》官网"
       }
     ]
   },
   {
-    "name": "电子书",
+    "name": "阅读",
     "site": [
       {
         "name": "轻小说文库",
@@ -114,8 +95,7 @@
       {
         "name": "长门有希的书架",
         "url": "https://haruyuki.cn/library",
-        "description": "《凉宫春日》系列",
-        "image": "https://haruyuki.cn/library/favicon.ico"
+        "description": "《凉宫春日》系列"
       },
       {
         "name": "鸠摩",
@@ -124,6 +104,10 @@
       {
         "name": "Gutenberg",
         "url": "https://www.gutenberg.org"
+      },
+      {
+        "name": "QuestMobile报告",
+        "url": "https://www.questmobile.com.cn/research/reports"
       }
     ]
   },
@@ -144,8 +128,7 @@
       },
       {
         "name": "月盒 MoonBox",
-        "url": "https://two-moons.site/",
-        "description": "音乐学习"
+        "url": "https://two-moons.site/"
       },
       {
         "name": "歌词滚动姬",
@@ -184,7 +167,7 @@
     ]
   },
   {
-    "name": "社交聊天",
+    "name": "社交媒体",
     "site": [
       {
         "name": "微博",
@@ -205,7 +188,8 @@
       },
       {
         "name": "贴吧",
-        "url": "https://tieba.baidu.com"
+        "url": "https://tieba.baidu.com",
+        "image": "https://www.baidu.com/favicon.ico"
       },
       {
         "name": "NGA",
@@ -231,18 +215,15 @@
       {
         "name": "pixiv",
         "url": "https://www.pixiv.net",
-        "image": "/images/pixiv.ico",
-        "description": "国外插画艺术社交平台"
+        "image": "/images/pixiv.ico"
       },
       {
         "name": "艺视",
-        "url": "https://artsee.cc/",
-        "description": "设定集资料库"
+        "url": "https://artsee.cc/"
       },
       {
         "name": "SauceNAO",
-        "url": "https://saucenao.com",
-        "description": "以图搜图"
+        "url": "https://saucenao.com"
       },
       {
         "name": "路过图床",
@@ -254,13 +235,12 @@
       },
       {
         "name": "pom",
-        "url": "https://pom-official.jp/",
-        "description": "画师pom"
+        "url": "https://pom-official.jp/"
       }
     ]
   },
   {
-    "name": "实用工具",
+    "name": "工具",
     "site": [
       {
         "name": "阿虚同学",
