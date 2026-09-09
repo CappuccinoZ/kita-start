@@ -1,0 +1,23 @@
+{
+	"new resource": {
+		"prefix": "resource",
+		"body": [
+			"{",
+			"  \"name\": \"$1\",",
+			"  \"site\": [$2]",
+			"},"
+		],
+		"description": "new resource"
+	},
+	"new site": {
+		"prefix": "site",
+		"body": [
+			"{",
+			"  \"name\": \"$1\",",
+			"  \"url\": \"$2\",",
+			"  \"image\": \"$3\"",
+			"},"
+		],
+		"description": "new site"
+	}
+}

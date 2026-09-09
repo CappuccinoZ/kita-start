@@ -291,6 +291,11 @@
       {
         "name": "Earth",
         "url": "https://earth.nullschool.net"
+      },
+      {
+        "name": "Internet Archive",
+        "url": "https://archive.org/",
+        "image": "/images/archive.ico"
       }
     ]
   },

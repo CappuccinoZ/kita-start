@@ -10,4 +10,4 @@
 | `npm run preview` | 预览项目           |
 
 ## 收录网站
-收录网站资源存放在`src/data/resource.json`文件中
+收录网站资源存放在`src/server/resource.json`文件中
