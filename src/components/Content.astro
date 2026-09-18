@@ -9,7 +9,7 @@ interface Props {
 const { resource } = Astro.props;
 ---
 
-<div class="content bg-[#fffcf2]">
+<div class="content bg-base-200">
   <div class="min-h-screen wp px-5 pt-5 pb-20 space-y-7.5">
     {resource.map((item) => <ResourcePanel resource={item} />)}
   </div>

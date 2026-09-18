@@ -1,4 +1,4 @@
-<div class="header fixed h-15 w-full bg-white z-100">
+<div class="header fixed h-15 w-full bg-base-100 z-100">
   <div class="relative flex items-center justify-between wp">
     <div class="flex items-center">
       <h1 class="font-semibold text-2xl">
@@ -63,19 +63,24 @@
 <script>
   const form = document.querySelector("#search-form") as HTMLFormElement;
   const input = document.querySelector("#search") as HTMLInputElement;
-  const panels = Array.from(document.querySelectorAll<HTMLElement>(".resource-panel"));
+  const panels = Array.from(
+    document.querySelectorAll<HTMLElement>(".resource-panel"),
+  );
 
   function filter() {
     const keyword = input.value.trim().toLowerCase();
 
     panels.forEach((panel) => {
-      const cards = Array.from(panel.querySelectorAll<HTMLElement>(".resource-card"));
+      const cards = Array.from(
+        panel.querySelectorAll<HTMLElement>(".resource-card"),
+      );
       let visibleCount = 0;
 
       cards.forEach((card) => {
         const name = card.dataset.name ?? "";
         const desc = card.dataset.desc ?? "";
-        const matched = !keyword || name.includes(keyword) || desc.includes(keyword);
+        const matched =
+          !keyword || name.includes(keyword) || desc.includes(keyword);
         card.parentElement!.style.display = matched ? "" : "none";
         if (matched) visibleCount++;
       });
@@ -87,6 +92,7 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     filter();
+    document.documentElement.scrollTop = window.innerHeight * 0.8 - 60;
   });
 
   input.addEventListener("input", () => {

@@ -12,7 +12,7 @@ const image = site.image ?? "https://ico.kucat.cn/get.php?url=" + url;
 
 <!-- 网站卡片 -->
 <a
-  class="resource-card flex h-full rounded-xl group"
+  class="resource-card flex h-full rounded-xl group bg-base-100 hover:scale-105"
   href={url}
   target="_blank"
   rel="noreferrer"
@@ -22,7 +22,7 @@ const image = site.image ?? "https://ico.kucat.cn/get.php?url=" + url;
   <div class="p-3.75">
     <div class="flex items-center h-8 w-full">
       <!-- 网站图片 -->
-      <div class="flex-none flex items-center justify-center size-9 mr-3.75 group-hover:bg-white overflow-hidden">
+      <div class="flex-none flex items-center justify-center size-8 mr-3.75 overflow-hidden">
         <Image src={image} alt={site.name} width="32" height="32" />
       </div>
 
@@ -39,15 +39,6 @@ const image = site.image ?? "https://ico.kucat.cn/get.php?url=" + url;
   @import "tailwindcss";
 
   .resource-card {
-    ---resource-card-bg-color: rgba(255, 244, 242, 0.8);
-    background-color: var(---resource-card-bg-color);
-    box-shadow: 5px 5px 0 rgba(186, 187, 165, 0.6);
     transition: scale .3s cubic-bezier(.68, -.55, .265, 1.55);
-  }
-
-
-  .resource-card:hover{
-    ---resource-card-bg-color: #50aa32;
-    @apply text-white scale-105;
   }
 </style>

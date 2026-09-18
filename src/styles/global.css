@@ -121,3 +121,8 @@ body {
   --menu-active-fg: var(--color-primary-content);
   --menu-active-bg: var(--color-primary);
 }
+
+.nav-fixed {
+  @apply fixed top-15 bg-base-200 border-transparent;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}

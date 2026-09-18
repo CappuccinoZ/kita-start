@@ -7,7 +7,7 @@ const { resource } = Astro.props;
 ---
 
 <div class="h-11.75">
-  <div class="top-nav">
+  <div class="top-nav bg-base-100 border-base-300">
     <ul class="flex items-center gap-7 wp h-full overflow-x-auto overflow-y-hidden">
       {
         resource.map((item) => (
@@ -24,7 +24,7 @@ const { resource } = Astro.props;
   @import "tailwindcss";
 
   .top-nav {
-    @apply h-11.5 w-full bg-white border-b border-[#e5e5e5] z-50;
+    @apply h-11.75 w-full border-b z-50;
     transition:
       background-color 0.3s ease,
       box-shadow 0.3s ease,
@@ -37,11 +37,6 @@ const { resource } = Astro.props;
 
   .top-nav a {
     @apply block px-1.5 text-sm leading-11.5;
-  }
-
-  .nav-fixed {
-    @apply fixed top-15 bg-[#fffcf2] border-transparent;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   }
 </style>
 
